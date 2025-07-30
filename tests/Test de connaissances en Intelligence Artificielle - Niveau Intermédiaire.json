@@ -1,0 +1,206 @@
+{
+  "title": "Test de connaissances en Intelligence Artificielle - Niveau Intermédiaire",
+  "totalQuestions": 20,
+  "questions": [
+    {
+      "text": "**Question 1**: Quelle est la différence principale entre l'apprentissage supervisé et non supervisé ?",
+      "answers": [
+        "A) La vitesse d'exécution",
+        "B) La présence ou absence d'étiquettes dans les données d'entraînement",
+        "C) Le type d'algorithme utilisé"
+      ],
+      "correctAnswer": "2",
+      "coefficient": "1"
+    },
+    {
+      "text": "**Question 2**: Qu'est-ce que la rétropropagation dans un réseau de neurones ?",
+      "answers": [
+        "A) Une méthode pour ajuster les poids en propageant l'erreur vers l'arrière",
+        "B) Une technique de compression de données",
+        "C) Un algorithme de tri"
+      ],
+      "correctAnswer": "1",
+      "coefficient": "1"
+    },
+    {
+      "text": "**Question 3**: Quel algorithme est couramment utilisé pour la classification des emails comme spam ?",
+      "answers": [
+        "A) Naive Bayes",
+        "B) Algorithme génétique",
+        "C) Recherche A*"
+      ],
+      "correctAnswer": "1",
+      "coefficient": "1"
+    },
+    {
+      "text": "**Question 4**: Qu'est-ce que l'overfitting (surapprentissage) ?",
+      "answers": [
+        "A) Un modèle qui apprend trop rapidement",
+        "B) Un modèle qui mémorise les données d'entraînement mais généralise mal",
+        "C) Un modèle qui consomme trop de mémoire"
+      ],
+      "correctAnswer": "2",
+      "coefficient": "1"
+    },
+    {
+      "text": "**Question 5**: Quelle méthode est utilisée pour évaluer la performance d'un modèle de classification ?",
+      "answers": [
+        "A) La matrice de confusion",
+        "B) La compression de données",
+        "C) L'optimisation des paramètres"
+      ],
+      "correctAnswer": "1",
+      "coefficient": "1"
+    },
+    {
+      "text": "**Question 6**: Qu'est-ce qu'un arbre de décision ?",
+      "answers": [
+        "A) Un algorithme de tri hiérarchique",
+        "B) Un modèle de classification basé sur des règles conditionnelles",
+        "C) Une structure de données linéaire"
+      ],
+      "correctAnswer": "2",
+      "coefficient": "1"
+    },
+    {
+      "text": "**Question 7**: Dans le contexte de l'apprentissage par renforcement, qu'est-ce qu'une récompense ?",
+      "answers": [
+        "A) Le temps d'exécution d'un algorithme",
+        "B) Un signal numérique indiquant la qualité d'une action",
+        "C) La taille du dataset"
+      ],
+      "correctAnswer": "2",
+      "coefficient": "1"
+    },
+    {
+      "text": "**Question 8**: Quelle technique est utilisée pour réduire la dimensionnalité des données ?",
+      "answers": [
+        "A) Analyse en Composantes Principales (PCA)",
+        "B) Regression linéaire",
+        "C) Classification bayésienne"
+      ],
+      "correctAnswer": "1",
+      "coefficient": "1"
+    },
+    {
+      "text": "**Question 9**: Qu'est-ce que l'algorithme K-means ?",
+      "answers": [
+        "A) Un algorithme de classification supervisée",
+        "B) Un algorithme de clustering (regroupement)",
+        "C) Un algorithme de tri"
+      ],
+      "correctAnswer": "2",
+      "coefficient": "1"
+    },
+    {
+      "text": "**Question 10**: Dans un réseau de neurones convolutionnel (CNN), quelle est la fonction principale d'une couche de convolution ?",
+      "answers": [
+        "A) Réduire la taille de l'image",
+        "B) Détecter des caractéristiques locales",
+        "C) Normaliser les données"
+      ],
+      "correctAnswer": "2",
+      "coefficient": "1"
+    },
+    {
+      "text": "**Question 11**: Qu'est-ce que la validation croisée (cross-validation) ?",
+      "answers": [
+        "A) Une technique pour diviser les données et évaluer la performance du modèle",
+        "B) Une méthode de chiffrement",
+        "C) Un algorithme d'optimisation"
+      ],
+      "correctAnswer": "1",
+      "coefficient": "1"
+    },
+    {
+      "text": "**Question 12**: Quel est l'objectif principal de la fonction d'activation dans un neurone artificiel ?",
+      "answers": [
+        "A) Introduire de la non-linéarité",
+        "B) Réduire la complexité computationnelle",
+        "C) Augmenter la vitesse de calcul"
+      ],
+      "correctAnswer": "1",
+      "coefficient": "1"
+    },
+    {
+      "text": "**Question 13**: Qu'est-ce que l'algorithme de gradient descendant ?",
+      "answers": [
+        "A) Une méthode pour trier des données",
+        "B) Une technique d'optimisation pour minimiser une fonction de coût",
+        "C) Un algorithme de chiffrement"
+      ],
+      "correctAnswer": "2",
+      "coefficient": "1"
+    },
+    {
+      "text": "**Question 14**: Dans le traitement du langage naturel, qu'est-ce que la tokenisation ?",
+      "answers": [
+        "A) La traduction automatique",
+        "B) La division d'un texte en unités plus petites (mots, phrases)",
+        "C) La synthèse vocale"
+      ],
+      "correctAnswer": "2",
+      "coefficient": "1"
+    },
+    {
+      "text": "**Question 15**: Qu'est-ce qu'un réseau de neurones récurrent (RNN) ?",
+      "answers": [
+        "A) Un réseau adapté aux données séquentielles",
+        "B) Un réseau qui se répète indéfiniment",
+        "C) Un réseau de neurones circulaire"
+      ],
+      "correctAnswer": "1",
+      "coefficient": "1"
+    },
+    {
+      "text": "**Question 16**: Quelle métrique évalue la capacité d'un modèle binaire à identifier correctement les cas positifs ?",
+      "answers": [
+        "A) La précision",
+        "B) Le rappel (recall/sensibilité)",
+        "C) La spécificité"
+      ],
+      "correctAnswer": "2",
+      "coefficient": "1"
+    },
+    {
+      "text": "**Question 17**: Qu'est-ce que l'ensemble learning (apprentissage d'ensemble) ?",
+      "answers": [
+        "A) L'entraînement simultané de plusieurs modèles",
+        "B) La combinaison de prédictions de plusieurs modèles",
+        "C) L'apprentissage collaboratif entre machines"
+      ],
+      "correctAnswer": "2",
+      "coefficient": "1"
+    },
+    {
+      "text": "**Question 18**: Dans l'apprentissage par renforcement, qu'est-ce qu'une politique (policy) ?",
+      "answers": [
+        "A) Une règle de sécurité",
+        "B) Une stratégie qui détermine quelle action prendre dans chaque état",
+        "C) Un ensemble de données d'entraînement"
+      ],
+      "correctAnswer": "2",
+      "coefficient": "1"
+    },
+    {
+      "text": "**Question 19**: Qu'est-ce que la régularisation en machine learning ?",
+      "answers": [
+        "A) Une technique pour accélérer l'entraînement",
+        "B) Une méthode pour prévenir l'overfitting en pénalisant la complexité",
+        "C) Un algorithme de classification"
+      ],
+      "correctAnswer": "2",
+      "coefficient": "1"
+    },
+    {
+      "text": "**Question 20**: Quelle architecture est spécialement conçue pour traiter des séquences de longueur variable ?",
+      "answers": [
+        "A) Perceptron multicouche",
+        "B) LSTM (Long Short-Term Memory)",
+        "C) Réseau de neurones convolutionnel"
+      ],
+      "correctAnswer": "2",
+      "coefficient": "1"
+    }
+  ]
+}

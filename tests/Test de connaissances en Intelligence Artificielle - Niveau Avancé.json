@@ -1,0 +1,206 @@
+{
+  "title": "Test de connaissances en Intelligence Artificielle - Niveau Avancé",
+  "totalQuestions": 20,
+  "questions": [
+    {
+      "text": "**Question 1**: Dans l'architecture Transformer, quel est le rôle principal du mécanisme d'attention multi-têtes ?",
+      "answers": [
+        "A) Réduire la complexité computationnelle",
+        "B) Permettre au modèle de se concentrer sur différents aspects de la séquence simultanément",
+        "C) Éviter le problème du gradient qui disparaît"
+      ],
+      "correctAnswer": "2",
+      "coefficient": "1"
+    },
+    {
+      "text": "**Question 2**: Quelle est la différence fondamentale entre les GANs (Generative Adversarial Networks) et les VAEs (Variational Autoencoders) ?",
+      "answers": [
+        "A) Les GANs utilisent un entraînement adversarial, les VAEs une approche probabiliste",
+        "B) Les GANs sont supervisés, les VAEs non supervisés",
+        "C) Les GANs génèrent des images, les VAEs du texte"
+      ],
+      "correctAnswer": "1",
+      "coefficient": "1"
+    },
+    {
+      "text": "**Question 3**: Dans l'apprentissage par renforcement, quelle est la différence entre on-policy et off-policy ?",
+      "answers": [
+        "A) On-policy utilise la politique courante pour l'exploration, off-policy une politique différente",
+        "B) On-policy est plus rapide que off-policy",
+        "C) On-policy fonctionne avec des récompenses continues, off-policy avec des récompenses discrètes"
+      ],
+      "correctAnswer": "1",
+      "coefficient": "1"
+    },
+    {
+      "text": "**Question 4**: Qu'est-ce que le problème de l'explosion du gradient et comment la normalisation par lot (batch normalization) l'atténue-t-elle ?",
+      "answers": [
+        "A) Les gradients deviennent trop petits; la normalisation les amplifie",
+        "B) Les gradients deviennent exponentiellement grands; la normalisation stabilise la distribution des activations",
+        "C) Le problème n'existe que dans les RNN, pas dans les CNN"
+      ],
+      "correctAnswer": "2",
+      "coefficient": "1"
+    },
+    {
+      "text": "**Question 5**: Dans l'optimisation bayésienne, quel est le rôle de la fonction d'acquisition ?",
+      "answers": [
+        "A) Calculer la probabilité a posteriori",
+        "B) Déterminer le prochain point à évaluer en équilibrant exploration et exploitation",
+        "C) Normaliser les hyperparamètres"
+      ],
+      "correctAnswer": "2",
+      "coefficient": "1"
+    },
+    {
+      "text": "**Question 6**: Quelle est la complexité temporelle de l'algorithme d'attention dans les Transformers et comment les 'Efficient Transformers' l'améliorent-ils ?",
+      "answers": [
+        "A) O(n) devenant O(log n) avec des approximations linéaires",
+        "B) O(n²) devenant O(n log n) ou O(n) avec des mécanismes d'attention sparse ou linéaire",
+        "C) O(n³) devenant O(n²) avec la parallélisation"
+      ],
+      "correctAnswer": "2",
+      "coefficient": "1"
+    },
+    {
+      "text": "**Question 7**: Dans les réseaux de neurones graphiques (GNN), comment l'agrégation de messages diffère-t-elle entre GraphSAGE et Graph Attention Networks ?",
+      "answers": [
+        "A) GraphSAGE utilise l'attention, GAT utilise l'échantillonnage",
+        "B) GraphSAGE échantillonne et agrège uniformément, GAT utilise des poids d'attention appris",
+        "C) Il n'y a pas de différence significative"
+      ],
+      "correctAnswer": "2",
+      "coefficient": "1"
+    },
+    {
+      "text": "**Question 8**: Qu'est-ce que la catastrophic forgetting et comment les techniques de continual learning l'adressent-elles ?",
+      "answers": [
+        "A) L'oubli des données d'entraînement; résolu par l'augmentation de données",
+        "B) L'oubli des tâches précédentes lors de l'apprentissage de nouvelles tâches; résolu par la régularisation ou la mémoire épisodique",
+        "C) Un problème uniquement dans les RNN résolu par les LSTM"
+      ],
+      "correctAnswer": "2",
+      "coefficient": "1"
+    },
+    {
+      "text": "**Question 9**: Dans l'apprentissage par renforcement profond, quelle est la contribution principale de l'algorithme PPO (Proximal Policy Optimization) ?",
+      "answers": [
+        "A) Une méthode pour éviter les changements de politique trop importants via une fonction objectif clippée",
+        "B) L'utilisation de réseaux de neurones convolutionnels",
+        "C) L'optimisation des hyperparamètres automatiquement"
+      ],
+      "correctAnswer": "1",
+      "coefficient": "1"
+    },
+    {
+      "text": "**Question 10**: Comment la technique de distillation de connaissances (knowledge distillation) fonctionne-t-elle ?",
+      "answers": [
+        "A) En compressant les poids du réseau",
+        "B) En entraînant un modèle étudiant à imiter les sorties d'un modèle enseignant plus complexe",
+        "C) En supprimant les couches inutiles"
+      ],
+      "correctAnswer": "2",
+      "coefficient": "1"
+    },
+    {
+      "text": "**Question 11**: Quelle est la différence conceptuelle entre l'apprentissage métrique et l'apprentissage de représentation ?",
+      "answers": [
+        "A) L'apprentissage métrique optimise une fonction de distance, l'apprentissage de représentation optimise un espace de features",
+        "B) L'apprentissage métrique est supervisé, l'apprentissage de représentation non supervisé",
+        "C) Il n'y a pas de différence, ce sont des synonymes"
+      ],
+      "correctAnswer": "1",
+      "coefficient": "1"
+    },
+    {
+      "text": "**Question 12**: Dans les modèles de langage de grande taille, qu'est-ce que l'emergent behavior et comment se manifeste-t-il ?",
+      "answers": [
+        "A) Des bugs qui apparaissent à grande échelle",
+        "B) Des capacités qui émergent au-delà d'un certain seuil de paramètres sans être explicitement programmées",
+        "C) La capacité de générer du code uniquement"
+      ],
+      "correctAnswer": "2",
+      "coefficient": "1"
+    },
+    {
+      "text": "**Question 13**: Comment la technique de gradient checkpointing permet-elle de réduire l'usage mémoire lors de l'entraînement ?",
+      "answers": [
+        "A) En supprimant des couches du réseau",
+        "B) En recalculant certaines activations au lieu de les stocker, échangeant mémoire contre calcul",
+        "C) En utilisant une précision réduite pour tous les calculs"
+      ],
+      "correctAnswer": "2",
+      "coefficient": "1"
+    },
+    {
+      "text": "**Question 14**: Qu'est-ce que l'alignement en IA et pourquoi est-ce crucial pour les systèmes d'IA avancés ?",
+      "answers": [
+        "A) L'optimisation des hyperparamètres pour de meilleures performances",
+        "B) S'assurer que les objectifs de l'IA correspondent aux valeurs et intentions humaines",
+        "C) L'alignement des données d'entraînement et de test"
+      ],
+      "correctAnswer": "2",
+      "coefficient": "1"
+    },
+    {
+      "text": "**Question 15**: Dans l'architecture MoE (Mixture of Experts), comment le routage des tokens vers les experts affecte-t-il l'efficacité computationnelle ?",
+      "answers": [
+        "A) Tous les experts sont activés pour chaque token",
+        "B) Seuls quelques experts sont activés par token, permettant une montée en échelle efficace",
+        "C) Le routage n'affecte pas l'efficacité"
+      ],
+      "correctAnswer": "2",
+      "coefficient": "1"
+    },
+    {
+      "text": "**Question 16**: Quelle est la différence entre l'apprentissage few-shot et zero-shot dans les modèles de langage ?",
+      "answers": [
+        "A) Few-shot utilise quelques exemples dans le prompt, zero-shot n'en utilise aucun",
+        "B) Few-shot nécessite un fine-tuning, zero-shot non",
+        "C) Few-shot fonctionne avec des modèles plus petits"
+      ],
+      "correctAnswer": "1",
+      "coefficient": "1"
+    },
+    {
+      "text": "**Question 17**: Comment les techniques de quantization affectent-elles la précision des modèles de deep learning ?",
+      "answers": [
+        "A) Elles améliorent toujours la précision",
+        "B) Elles réduisent la taille du modèle au prix d'une légère perte de précision",
+        "C) Elles n'ont aucun effet sur la précision"
+      ],
+      "correctAnswer": "2",
+      "coefficient": "1"
+    },
+    {
+      "text": "**Question 18**: Dans l'apprentissage auto-supervisé, comment les modèles de langage masqué (comme BERT) diffèrent-ils des modèles autoregressifs (comme GPT) ?",
+      "answers": [
+        "A) BERT prédit des tokens masqués bidirectionnellement, GPT prédit le token suivant unidirectionnellement",
+        "B) BERT est générateur, GPT est discriminateur",
+        "C) BERT utilise l'attention, GPT utilise la convolution"
+      ],
+      "correctAnswer": "1",
+      "coefficient": "1"
+    },
+    {
+      "text": "**Question 19**: Qu'est-ce que la scalable oversight et pourquoi est-elle importante pour l'IA superintelligente ?",
+      "answers": [
+        "A) L'optimisation automatique des hyperparamètres",
+        "B) Des méthodes pour superviser des systèmes d'IA plus capables que leurs superviseurs humains",
+        "C) L'entraînement distribué sur plusieurs machines"
+      ],
+      "correctAnswer": "2",
+      "coefficient": "1"
+    },
+    {
+      "text": "**Question 20**: Comment les méthodes de recherche neurale d'architecture (NAS) révolutionnent-elles la conception de réseaux de neurones ?",
+      "answers": [
+        "A) En automatisant la découverte d'architectures optimales plutôt que de les concevoir manuellement",
+        "B) En réduisant le nombre de paramètres nécessaires",
+        "C) En accélérant uniquement l'entraînement"
+      ],
+      "correctAnswer": "1",
+      "coefficient": "1"
+    }
+  ]
+}

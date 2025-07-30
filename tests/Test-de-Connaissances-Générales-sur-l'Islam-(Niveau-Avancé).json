@@ -1,0 +1,106 @@
+{
+  "title": "Test de Connaissances Générales sur l'Islam (Niveau Avancé)",
+  "totalQuestions": 10,
+  "questions": [
+    {
+      "text": "**Question 1**: Quel savant musulman est connu pour avoir compilé le recueil de hadiths authentiques \"Sahih al-Bukhari\" ?",
+      "answers": [
+        "A) Imam Muslim ibn al-Hajjaj",
+        "B) Imam Muhammad al-Bukhari",
+        "C) Imam Abu Dawud"
+      ],
+      "correctAnswer": "2",
+      "coefficient": "1"
+    },
+    {
+      "text": "**Question 2**: Dans la science du tafsir (exégèse coranique), comment appelle-t-on l'interprétation basée sur la transmission et non sur l'opinion personnelle ?",
+      "answers": [
+        "A) Tafsir bi-l-ra'y",
+        "B) Tafsir bi-l-ma'thur",
+        "C) Tafsir ishari"
+      ],
+      "correctAnswer": "2",
+      "coefficient": "1"
+    },
+    {
+      "text": "**Question 3**: Quel terme désigne la jurisprudence islamique fondée sur l'effort d'interprétation d'un savant qualifié ?",
+      "answers": [
+        "A) Ijma",
+        "B) Qiyas",
+        "C) Ijtihad"
+      ],
+      "correctAnswer": "3",
+      "coefficient": "1"
+    },
+    {
+      "text": "**Question 4**: Quelle est la signification de \"Laylat al-Qadr\" ?",
+      "answers": [
+        "A) La nuit du destin",
+        "B) La nuit du voyage nocturne",
+        "C) La nuit de l'ascension"
+      ],
+      "correctAnswer": "1",
+      "coefficient": "1"
+    },
+    {
+      "text": "**Question 5**: Quel compagnon du Prophète est connu comme le plus grand rapporteur de hadiths ?",
+      "answers": [
+        "A) Abu Hurayra",
+        "B) Abdullah ibn Umar",
+        "C) Anas ibn Malik"
+      ],
+      "correctAnswer": "1",
+      "coefficient": "1"
+    },
+    {
+      "text": "**Question 6**: Comment s'appelle la période précédant la révélation coranique, durant laquelle le Prophète Muhammad se retirait dans la grotte de Hira ?",
+      "answers": [
+        "A) Tahannuth",
+        "B) I'tikaf",
+        "C) Khalwa"
+      ],
+      "correctAnswer": "1",
+      "coefficient": "1"
+    },
+    {
+      "text": "**Question 7**: Lequel de ces termes désigne l'école de pensée théologique rationaliste en islam ?",
+      "answers": [
+        "A) Ash'arisme",
+        "B) Mu'tazilisme",
+        "C) Maturidisme"
+      ],
+      "correctAnswer": "2",
+      "coefficient": "1"
+    },
+    {
+      "text": "**Question 8**: Quelle est la différence entre \"fard ayn\" et \"fard kifaya\" en droit islamique ?",
+      "answers": [
+        "A) Le premier est obligatoire pour tous, le second est une obligation collective",
+        "B) Le premier concerne la croyance, le second la pratique",
+        "C) Le premier est recommandé, le second est obligatoire"
+      ],
+      "correctAnswer": "1",
+      "coefficient": "1"
+    },
+    {
+      "text": "**Question 9**: Quel savant médiéval a écrit le célèbre traité \"Ihya 'Ulum ad-Din\" (Revivification des sciences religieuses) ?",
+      "answers": [
+        "A) Ibn Taymiyyah",
+        "B) Al-Ghazali",
+        "C) Ibn Rushd (Averroès)"
+      ],
+      "correctAnswer": "2",
+      "coefficient": "1"
+    },
+    {
+      "text": "**Question 10**: En quelle année de l'hégire eut lieu le Traité de Hudaybiya ?",
+      "answers": [
+        "A) An 6",
+        "B) An 8",
+        "C) An 10"
+      ],
+      "correctAnswer": "1",
+      "coefficient": "1"
+    }
+  ]
+}

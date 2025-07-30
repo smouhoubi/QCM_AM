@@ -1,0 +1,206 @@
+{
+  "title": "Test de connaissances en Intelligence Artificielle - Niveau Débutant",
+  "totalQuestions": 20,
+  "questions": [
+    {
+      "text": "**Question 1**: Que signifie l'acronyme IA ?",
+      "answers": [
+        "A) Intelligence Automatique",
+        "B) Intelligence Artificielle",
+        "C) Information Algorithmique"
+      ],
+      "correctAnswer": "2",
+      "coefficient": "1"
+    },
+    {
+      "text": "**Question 2**: Qui est considéré comme le père de l'Intelligence Artificielle ?",
+      "answers": [
+        "A) Alan Turing",
+        "B) Bill Gates",
+        "C) Steve Jobs"
+      ],
+      "correctAnswer": "1",
+      "coefficient": "1"
+    },
+    {
+      "text": "**Question 3**: Qu'est-ce que le test de Turing ?",
+      "answers": [
+        "A) Un test de vitesse de calcul",
+        "B) Un test pour évaluer si une machine peut imiter l'intelligence humaine",
+        "C) Un test de sécurité informatique"
+      ],
+      "correctAnswer": "2",
+      "coefficient": "1"
+    },
+    {
+      "text": "**Question 4**: Que signifie 'Machine Learning' en français ?",
+      "answers": [
+        "A) Apprentissage automatique",
+        "B) Machine intelligente",
+        "C) Calcul rapide"
+      ],
+      "correctAnswer": "1",
+      "coefficient": "1"
+    },
+    {
+      "text": "**Question 5**: Quel type d'IA peut jouer aux échecs ?",
+      "answers": [
+        "A) IA générale",
+        "B) IA faible (spécialisée)",
+        "C) IA émotionnelle"
+      ],
+      "correctAnswer": "2",
+      "coefficient": "1"
+    },
+    {
+      "text": "**Question 6**: Qu'est-ce qu'un algorithme ?",
+      "answers": [
+        "A) Un type d'ordinateur",
+        "B) Une suite d'instructions pour résoudre un problème",
+        "C) Un langage de programmation"
+      ],
+      "correctAnswer": "2",
+      "coefficient": "1"
+    },
+    {
+      "text": "**Question 7**: Dans quel domaine l'IA est-elle utilisée pour analyser des images médicales ?",
+      "answers": [
+        "A) Vision par ordinateur",
+        "B) Traitement du langage naturel",
+        "C) Robotique"
+      ],
+      "correctAnswer": "1",
+      "coefficient": "1"
+    },
+    {
+      "text": "**Question 8**: Qu'est-ce qu'un chatbot ?",
+      "answers": [
+        "A) Un robot physique",
+        "B) Un programme qui simule une conversation",
+        "C) Un jeu vidéo"
+      ],
+      "correctAnswer": "2",
+      "coefficient": "1"
+    },
+    {
+      "text": "**Question 9**: Quelle entreprise a développé l'assistant vocal Siri ?",
+      "answers": [
+        "A) Google",
+        "B) Apple",
+        "C) Microsoft"
+      ],
+      "correctAnswer": "2",
+      "coefficient": "1"
+    },
+    {
+      "text": "**Question 10**: Qu'est-ce que le Big Data ?",
+      "answers": [
+        "A) Un grand ordinateur",
+        "B) De très grandes quantités de données",
+        "C) Un logiciel coûteux"
+      ],
+      "correctAnswer": "2",
+      "coefficient": "1"
+    },
+    {
+      "text": "**Question 11**: Dans quel jeu l'IA AlphaGo a-t-elle battu le champion du monde ?",
+      "answers": [
+        "A) Échecs",
+        "B) Go",
+        "C) Poker"
+      ],
+      "correctAnswer": "2",
+      "coefficient": "1"
+    },
+    {
+      "text": "**Question 12**: Qu'est-ce que la reconnaissance vocale ?",
+      "answers": [
+        "A) La capacité de comprendre la parole humaine",
+        "B) La création de voix artificielles",
+        "C) L'enregistrement audio"
+      ],
+      "correctAnswer": "1",
+      "coefficient": "1"
+    },
+    {
+      "text": "**Question 13**: Quel est le principal avantage de l'IA dans les voitures autonomes ?",
+      "answers": [
+        "A) Réduction de la consommation",
+        "B) Amélioration de la sécurité routière",
+        "C) Réduction du prix"
+      ],
+      "correctAnswer": "2",
+      "coefficient": "1"
+    },
+    {
+      "text": "**Question 14**: Qu'est-ce qu'un réseau de neurones artificiels ?",
+      "answers": [
+        "A) Un système inspiré du cerveau humain",
+        "B) Un réseau d'ordinateurs",
+        "C) Un câble électrique"
+      ],
+      "correctAnswer": "1",
+      "coefficient": "1"
+    },
+    {
+      "text": "**Question 15**: Dans quel domaine l'IA aide-t-elle à traduire des langues ?",
+      "answers": [
+        "A) Traitement du langage naturel",
+        "B) Vision par ordinateur",
+        "C) Robotique industrielle"
+      ],
+      "correctAnswer": "1",
+      "coefficient": "1"
+    },
+    {
+      "text": "**Question 16**: Qu'est-ce que l'apprentissage supervisé ?",
+      "answers": [
+        "A) Apprentissage avec des exemples étiquetés",
+        "B) Apprentissage sans données",
+        "C) Apprentissage par imitation"
+      ],
+      "correctAnswer": "1",
+      "coefficient": "1"
+    },
+    {
+      "text": "**Question 17**: Quelle technologie permet aux ordinateurs de 'voir' ?",
+      "answers": [
+        "A) Vision par ordinateur",
+        "B) Audio processing",
+        "C) Text mining"
+      ],
+      "correctAnswer": "1",
+      "coefficient": "1"
+    },
+    {
+      "text": "**Question 18**: Qu'est-ce qu'un robot ?",
+      "answers": [
+        "A) Un programme informatique",
+        "B) Une machine programmable capable d'effectuer des tâches",
+        "C) Un smartphone"
+      ],
+      "correctAnswer": "2",
+      "coefficient": "1"
+    },
+    {
+      "text": "**Question 19**: Dans quel secteur l'IA est-elle utilisée pour détecter les fraudes ?",
+      "answers": [
+        "A) Éducation",
+        "B) Finance",
+        "C) Agriculture"
+      ],
+      "correctAnswer": "2",
+      "coefficient": "1"
+    },
+    {
+      "text": "**Question 20**: Qu'est-ce que l'IA générative ?",
+      "answers": [
+        "A) Une IA qui crée du contenu nouveau",
+        "B) Une IA qui répare des machines",
+        "C) Une IA qui consomme moins d'énergie"
+      ],
+      "correctAnswer": "1",
+      "coefficient": "1"
+    }
+  ]
+}
