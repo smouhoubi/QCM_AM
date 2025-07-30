@@ -1,0 +1,84 @@
+{
+  "candidateName": "ABD_M",
+  "testTitle": "Mathématiques - Niveau 1",
+  "totalQuestions": 10,
+  "correctAnswers": 5,
+  "score": "8.00",
+  "timeSpent": {
+    "seconds": 18,
+    "formatted": "00:18"
+  },
+  "detailedAnswers": [
+    {
+      "questionIndex": 0,
+      "questionText": "Question 1 du test \"Mathématiques - Niveau 1\"",
+      "answer": "1",
+      "correctAnswer": "1",
+      "coefficient": 1
+    },
+    {
+      "questionIndex": 1,
+      "questionText": "Question 2 du test \"Mathématiques - Niveau 1\"",
+      "answer": "2",
+      "correctAnswer": "3",
+      "coefficient": 1
+    },
+    {
+      "questionIndex": 2,
+      "questionText": "Question 3 du test \"Mathématiques - Niveau 1\"",
+      "answer": "3",
+      "correctAnswer": "3",
+      "coefficient": 1
+    },
+    {
+      "questionIndex": 3,
+      "questionText": "Question 4 du test \"Mathématiques - Niveau 1\"",
+      "answer": "1",
+      "correctAnswer": "1",
+      "coefficient": 1
+    },
+    {
+      "questionIndex": 4,
+      "questionText": "Question 5 du test \"Mathématiques - Niveau 1\"",
+      "answer": "2",
+      "correctAnswer": "1",
+      "coefficient": 3
+    },
+    {
+      "questionIndex": 5,
+      "questionText": "Question 6 du test \"Mathématiques - Niveau 1\"",
+      "answer": "3",
+      "correctAnswer": "3",
+      "coefficient": 2
+    },
+    {
+      "questionIndex": 6,
+      "questionText": "Question 7 du test \"Mathématiques - Niveau 1\"",
+      "answer": "1",
+      "correctAnswer": "3",
+      "coefficient": 2
+    },
+    {
+      "questionIndex": 7,
+      "questionText": "Question 8 du test \"Mathématiques - Niveau 1\"",
+      "answer": "2",
+      "correctAnswer": "1",
+      "coefficient": 3
+    },
+    {
+      "questionIndex": 8,
+      "questionText": "Question 9 du test \"Mathématiques - Niveau 1\"",
+      "answer": "3",
+      "correctAnswer": "3",
+      "coefficient": 3
+    },
+    {
+      "questionIndex": 9,
+      "questionText": "Question 10 du test \"Mathématiques - Niveau 1\"",
+      "answer": "1",
+      "correctAnswer": "3",
+      "coefficient": 3
+    }
+  ],
+  "date": "2025-07-28T14:57:54.821Z"
+}

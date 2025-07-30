@@ -1,0 +1,84 @@
+{
+  "candidateName": "ABDEL_MOUH",
+  "testTitle": "Test de connaissances en mathématiques - Niveau Débutant",
+  "totalQuestions": 10,
+  "correctAnswers": 4,
+  "score": "8.00",
+  "timeSpent": {
+    "seconds": 19,
+    "formatted": "00:19"
+  },
+  "detailedAnswers": [
+    {
+      "questionIndex": 0,
+      "questionText": "**Question 1**: Quelle est la formule pour calculer l'aire d'un cercle ?",
+      "answer": "2",
+      "correctAnswer": "2",
+      "coefficient": "1"
+    },
+    {
+      "questionIndex": 1,
+      "questionText": "**Question 2**: Quelle est la valeur de x dans l'équation 2x + 5 = 13 ?",
+      "answer": "2",
+      "correctAnswer": "1",
+      "coefficient": "1"
+    },
+    {
+      "questionIndex": 2,
+      "questionText": "**Question 3**: Comment appelle-t-on un triangle qui a deux côtés égaux ?",
+      "answer": "3",
+      "correctAnswer": "2",
+      "coefficient": "1"
+    },
+    {
+      "questionIndex": 3,
+      "questionText": "**Question 4**: Quelle est la formule du théorème de Pythagore ?",
+      "answer": "1",
+      "correctAnswer": "1",
+      "coefficient": "1"
+    },
+    {
+      "questionIndex": 4,
+      "questionText": "**Question 5**: Combien vaut la somme des angles d'un triangle ?",
+      "answer": "2",
+      "correctAnswer": "2",
+      "coefficient": "1"
+    },
+    {
+      "questionIndex": 5,
+      "questionText": "**Question 6**: Comment appelle-t-on deux angles dont la somme est égale à 90° ?",
+      "answer": "3",
+      "correctAnswer": "2",
+      "coefficient": "1"
+    },
+    {
+      "questionIndex": 6,
+      "questionText": "**Question 7**: Quelle est la pente d'une droite horizontale ?",
+      "answer": "2",
+      "correctAnswer": "1",
+      "coefficient": "1"
+    },
+    {
+      "questionIndex": 7,
+      "questionText": "**Question 8**: Résoudre l'inéquation : 3x - 2 > 7",
+      "answer": "3",
+      "correctAnswer": "1",
+      "coefficient": "1"
+    },
+    {
+      "questionIndex": 8,
+      "questionText": "**Question 9**: Quel est le périmètre d'un carré de côté 5 cm ?",
+      "answer": "3",
+      "correctAnswer": "1",
+      "coefficient": "1"
+    },
+    {
+      "questionIndex": 9,
+      "questionText": "**Question 10**: Si un nombre est multiplié par 0, le résultat est toujours :",
+      "answer": "3",
+      "correctAnswer": "3",
+      "coefficient": "1"
+    }
+  ],
+  "date": "2025-07-28T15:19:45.508Z"
+}

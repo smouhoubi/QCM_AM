@@ -1,0 +1,154 @@
+{
+  "candidateName": "Abdallah_M",
+  "testTitle": "Test de Recrutement - Capacité d'Analyse et Logique - Niveau Intermédiaire",
+  "totalQuestions": 20,
+  "correctAnswers": 16,
+  "score": "16.00",
+  "timeSpent": {
+    "seconds": 1168,
+    "formatted": "19:28"
+  },
+  "detailedAnswers": [
+    {
+      "questionIndex": 0,
+      "questionText": "**Question 1**: Si tous les A sont B, et certains B sont C, quelle conclusion peut-on tirer avec certitude ?",
+      "answer": "2",
+      "correctAnswer": "3",
+      "coefficient": "1"
+    },
+    {
+      "questionIndex": 1,
+      "questionText": "**Question 2**: Une entreprise constate que ses ventes augmentent de 15% chaque trimestre depuis 2 ans. Si les ventes du T1 étaient de 100 000€, quelles seront approximativement les ventes du T3 de la même année ?",
+      "answer": "1",
+      "correctAnswer": "1",
+      "coefficient": "1"
+    },
+    {
+      "questionIndex": 2,
+      "questionText": "**Question 3**: Dans une séquence logique : 2, 6, 12, 20, 30, ?, quel est le nombre suivant ?",
+      "answer": "1",
+      "correctAnswer": "2",
+      "coefficient": "1"
+    },
+    {
+      "questionIndex": 3,
+      "questionText": "**Question 4**: Un manager doit analyser trois rapports contradictoires sur le même projet. Quelle approche analytique est la plus appropriée ?",
+      "answer": "2",
+      "correctAnswer": "2",
+      "coefficient": "1"
+    },
+    {
+      "questionIndex": 4,
+      "questionText": "**Question 5**: Si P implique Q, et Q implique R, alors :",
+      "answer": "2",
+      "correctAnswer": "2",
+      "coefficient": "1"
+    },
+    {
+      "questionIndex": 5,
+      "questionText": "**Question 6**: Une équipe de 5 personnes produit 150 unités en 8 heures. Combien d'unités produiront 8 personnes au même rythme en 6 heures ?",
+      "answer": "1",
+      "correctAnswer": "1",
+      "coefficient": "1"
+    },
+    {
+      "questionIndex": 6,
+      "questionText": "**Question 7**: Parmi ces indicateurs, lequel est le plus pertinent pour évaluer la performance d'un service client ?",
+      "answer": "2",
+      "correctAnswer": "2",
+      "coefficient": "1"
+    },
+    {
+      "questionIndex": 7,
+      "questionText": "**Question 8**: Si A > B, B > C et C > D, quelle affirmation est nécessairement vraie ?",
+      "answer": "2",
+      "correctAnswer": "2",
+      "coefficient": "1"
+    },
+    {
+      "questionIndex": 8,
+      "questionText": "**Question 9**: Un problème complexe peut être résolu par décomposition. Quelle est la première étape logique ?",
+      "answer": "2",
+      "correctAnswer": "2",
+      "coefficient": "1"
+    },
+    {
+      "questionIndex": 9,
+      "questionText": "**Question 10**: Dans une analyse SWOT, un facteur peut-il être à la fois une force et une faiblesse ?",
+      "answer": "2",
+      "correctAnswer": "2",
+      "coefficient": "1"
+    },
+    {
+      "questionIndex": 10,
+      "questionText": "**Question 11**: Complétez la série : 1, 4, 9, 16, ?, 36",
+      "answer": "2",
+      "correctAnswer": "2",
+      "coefficient": "1"
+    },
+    {
+      "questionIndex": 11,
+      "questionText": "**Question 12**: Face à des données incomplètes, quelle approche analytique est recommandée ?",
+      "answer": "2",
+      "correctAnswer": "2",
+      "coefficient": "1"
+    },
+    {
+      "questionIndex": 12,
+      "questionText": "**Question 13**: Si 40% des clients préfèrent le produit A, 35% le produit B, et 25% sont indécis, quelle stratégie marketing prioriser ?",
+      "answer": "2",
+      "correctAnswer": "2",
+      "coefficient": "1"
+    },
+    {
+      "questionIndex": 13,
+      "questionText": "**Question 14**: Dans un raisonnement par analogie, quel est le principal risque ?",
+      "answer": "2",
+      "correctAnswer": "2",
+      "coefficient": "1"
+    },
+    {
+      "questionIndex": 14,
+      "questionText": "**Question 15**: Un graphique montre une corrélation positive entre deux variables. Que peut-on conclure ?",
+      "answer": "2",
+      "correctAnswer": "2",
+      "coefficient": "1"
+    },
+    {
+      "questionIndex": 15,
+      "questionText": "**Question 16**: Pour résoudre un conflit entre deux départements, quelle approche analytique privilégier ?",
+      "answer": "1",
+      "correctAnswer": "2",
+      "coefficient": "1"
+    },
+    {
+      "questionIndex": 16,
+      "questionText": "**Question 17**: Si X = 2Y et Y = 3Z, alors X en fonction de Z est :",
+      "answer": "2",
+      "correctAnswer": "2",
+      "coefficient": "1"
+    },
+    {
+      "questionIndex": 17,
+      "questionText": "**Question 18**: Dans l'analyse d'un problème récurrent, quelle méthode est la plus efficace ?",
+      "answer": "2",
+      "correctAnswer": "2",
+      "coefficient": "1"
+    },
+    {
+      "questionIndex": 18,
+      "questionText": "**Question 19**: Un projet présente 60% de chance de réussite avec un gain de 100k€, et 40% de risque d'échec avec une perte de 50k€. Quelle est l'espérance mathématique ?",
+      "answer": "3",
+      "correctAnswer": "1",
+      "coefficient": "1"
+    },
+    {
+      "questionIndex": 19,
+      "questionText": "**Question 20**: Face à plusieurs solutions possibles, quel critère de décision est le plus objectif ?",
+      "answer": "2",
+      "correctAnswer": "2",
+      "coefficient": "1"
+    }
+  ],
+  "date": "2025-07-28T19:02:56.111Z"
+}
