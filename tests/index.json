@@ -1,70 +1,40 @@
 {
   "tests": [
     {
-      "id": "questions1",
-      "title": "TEST MATIERE X",
-      "description": "Test de base avec 3 questions - Idéal pour débuter",
-      "totalQuestions": 3,
-      "filename": "questions1.json",
-      "difficulty": "Facile",
-      "category": "Général",
+      "id": "islam1",
+      "title": "Test de Connaissances Générales sur l'Islam Niveau débutant",
+      "description": "Test de connaissances de base sur l'Islam - Idéal pour débuter",
+      "totalQuestions": 10,
+      "filename": "islam_debutant.json",
+      "difficulty": "facile",
+      "category": "Religions",
       "author": "Admin",
       "dateCreated": "2024-01-15",
       "estimatedTime": "5 minutes"
     },
     {
-      "id": "math-basic",
-      "title": "Mathématiques - Niveau Débutant",
-      "description": "Arithmétique et algèbre de base",
+      "id": "islam2",
+      "title": "Test de Connaissances Générales sur l'Islam Niveau intermédiaire",
+      "description": "Test de connaissances de base sur l'Islam - niveau intermédiaire",
       "totalQuestions": 10,
-      "filename": "maths-debutant.json",
-      "difficulty": "Facile",
-      "category": "Mathématiques",
-      "author": "Prof. Martin",
-      "dateCreated": "2024-01-20",
-      "estimatedTime": "15 minutes"
+      "filename": "islam_intermediaire.json",
+      "difficulty": "moyen",
+      "category": "Religions",
+      "author": "Admin",
+      "dateCreated": "2024-01-15",
+      "estimatedTime": "5 minutes"
     },
     {
-      "id": "french-grammar",
-      "title": "Français - Grammaire",
-      "description": "Règles de grammaire française essentielles",
-      "totalQuestions": 12,
-      "filename": "francais-grammaire.json",
-      "difficulty": "Moyen",
-      "category": "Français",
-      "author": "Prof. Dubois",
+      "id": "histoire1",
+      "title": "Histoire de la civilisation arabo-musulmane - Niveau Débutant",
+      "description": "Test de connaissances en Histoire de la civilisation arabo-musulmane - Niveau Débutant",
+      "totalQuestions": 20,
+      "filename": "civilisation_arabo_musulmane_debutant.json",
+      "difficulty": "facile",
+      "category": "Histoire",
+      "author": "Public",
       "dateCreated": "2024-01-22",
       "estimatedTime": "20 minutes"
-    },
-    {
-      "id": "culture-generale",
-      "title": "Culture Générale",
-      "description": "Histoire, géographie, sciences et actualités",
-      "totalQuestions": 20,
-      "filename": "culture-generale.json",
-      "difficulty": "Moyen",
-      "category": "Culture",
-      "author": "Prof. Leclerc",
-      "dateCreated": "2024-01-25",
-      "estimatedTime": "30 minutes"
-    },
-    {
-      "id": "programming-basics",
-      "title": "Programmation - Bases",
-      "description": "Concepts fondamentaux de programmation",
-      "totalQuestions": 18,
-      "filename": "programmation-bases.json",
-      "difficulty": "Moyen",
-      "category": "Informatique",
-      "author": "Prof. Techno",
-      "dateCreated": "2024-01-28",
-      "estimatedTime": "25 minutes"
     }
-  ],
-  "metadata": {
-    "version": "1.0",
-    "lastUpdated": "2024-01-30",
-    "totalTests": 5,
-    "description": "Index des tests de connaissances disponibles"
-  }
+  ]
 }
