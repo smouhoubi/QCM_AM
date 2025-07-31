@@ -1,0 +1,206 @@
+{
+  "title": "Test de Recrutement - Analyste en Informatique - Niveau Intermédiaire",
+  "totalQuestions": 20,
+  "questions": [
+    {
+      "text": "**Question 1**: Dans un système de gestion de base de données, quelle est la principale fonction d'un index ?",
+      "answers": [
+        "A) Sauvegarder les données",
+        "B) Accélérer les requêtes de recherche",
+        "C) Chiffrer les informations sensibles"
+      ],
+      "correctAnswer": "2",
+      "coefficient": "1"
+    },
+    {
+      "text": "**Question 2**: Lors de l'analyse d'un système existant, quelle approche privilégier pour identifier les goulots d'étranglement ?",
+      "answers": [
+        "A) Refaire complètement l'architecture",
+        "B) Monitorer les performances et analyser les métriques système",
+        "C) Augmenter la puissance du serveur"
+      ],
+      "correctAnswer": "2",
+      "coefficient": "1"
+    },
+    {
+      "text": "**Question 3**: En analyse des besoins, que signifie un besoin 'fonctionnel' par opposition à un besoin 'non-fonctionnel' ?",
+      "answers": [
+        "A) Fonctionnel = ce que le système doit faire, Non-fonctionnel = comment il doit le faire",
+        "B) Fonctionnel = urgent, Non-fonctionnel = optionnel",
+        "C) Fonctionnel = pour les utilisateurs, Non-fonctionnel = pour les développeurs"
+      ],
+      "correctAnswer": "1",
+      "coefficient": "1"
+    },
+    {
+      "text": "**Question 4**: Dans un diagramme UML de cas d'usage, que représente une relation 'extend' ?",
+      "answers": [
+        "A) Une fonctionnalité obligatoire du cas d'usage de base",
+        "B) Une fonctionnalité optionnelle qui peut étendre le cas d'usage de base",
+        "C) Une erreur dans le système"
+      ],
+      "correctAnswer": "2",
+      "coefficient": "1"
+    },
+    {
+      "text": "**Question 5**: Un utilisateur signale que l'application est 'lente'. Quelle est votre première démarche d'analyse ?",
+      "answers": [
+        "A) Redémarrer le serveur",
+        "B) Quantifier et localiser précisément le problème de performance",
+        "C) Proposer un nouveau serveur plus puissant"
+      ],
+      "correctAnswer": "2",
+      "coefficient": "1"
+    },
+    {
+      "text": "**Question 6**: Dans une architecture 3-tiers, quels sont les trois niveaux ?",
+      "answers": [
+        "A) Développement, Test, Production",
+        "B) Présentation, Logique métier, Données",
+        "C) Frontend, Backend, Base de données"
+      ],
+      "correctAnswer": "2",
+      "coefficient": "1"
+    },
+    {
+      "text": "**Question 7**: Quelle méthode d'analyse permet de modéliser les flux de données dans un système ?",
+      "answers": [
+        "A) Diagramme de Gantt",
+        "B) Diagramme de flux de données (DFD)",
+        "C) Diagramme de réseau"
+      ],
+      "correctAnswer": "2",
+      "coefficient": "1"
+    },
+    {
+      "text": "**Question 8**: Dans l'analyse d'une base de données, qu'indique une relation 'many-to-many' ?",
+      "answers": [
+        "A) Erreur de conception à éviter",
+        "B) Relation où plusieurs enregistrements d'une table correspondent à plusieurs d'une autre",
+        "C) Relation hiérarchique stricte"
+      ],
+      "correctAnswer": "2",
+      "coefficient": "1"
+    },
+    {
+      "text": "**Question 9**: Pour analyser les risques d'un projet informatique, quelle approche est recommandée ?",
+      "answers": [
+        "A) Ignorer les risques peu probables",
+        "B) Identifier, évaluer et planifier des mesures de mitigation",
+        "C) Se concentrer uniquement sur les risques techniques"
+      ],
+      "correctAnswer": "2",
+      "coefficient": "1"
+    },
+    {
+      "text": "**Question 10**: Dans l'analyse de la sécurité d'un système, que représente le principe du 'moindre privilège' ?",
+      "answers": [
+        "A) Donner un accès minimal nécessaire à chaque utilisateur",
+        "B) Réduire le nombre total d'utilisateurs",
+        "C) Utiliser des mots de passe simples"
+      ],
+      "correctAnswer": "1",
+      "coefficient": "1"
+    },
+    {
+      "text": "**Question 11**: Un système traite 1000 transactions par minute en moyenne. Lors d'un pic, il doit supporter 150% de cette charge. Quelle capacité minimale prévoir ?",
+      "answers": [
+        "A) 1500 transactions/minute",
+        "B) 2000 transactions/minute avec marge de sécurité",
+        "C) 1000 transactions/minute suffisent"
+      ],
+      "correctAnswer": "2",
+      "coefficient": "1"
+    },
+    {
+      "text": "**Question 12**: Dans l'analyse d'intégration entre systèmes, quelle approche favorise la réutilisabilité ?",
+      "answers": [
+        "A) Connexions directes point-à-point",
+        "B) Architecture orientée services (SOA) ou API REST",
+        "C) Duplication des données entre systèmes"
+      ],
+      "correctAnswer": "2",
+      "coefficient": "1"
+    },
+    {
+      "text": "**Question 13**: Pour analyser la qualité du code d'une application, quels indicateurs observer ?",
+      "answers": [
+        "A) Uniquement le nombre de lignes de code",
+        "B) Complexité cyclomatique, taux de couverture des tests, duplication",
+        "C) Uniquement la vitesse d'exécution"
+      ],
+      "correctAnswer": "2",
+      "coefficient": "1"
+    },
+    {
+      "text": "**Question 14**: Dans un projet Agile, quel est le rôle principal de l'analyste durant un sprint ?",
+      "answers": [
+        "A) Rédiger toute la documentation en début de sprint",
+        "B) Clarifier les besoins et collaborer continuellement avec l'équipe",
+        "C) Tester uniquement en fin de sprint"
+      ],
+      "correctAnswer": "2",
+      "coefficient": "1"
+    },
+    {
+      "text": "**Question 15**: Comment analyser l'impact d'une modification sur un système existant ?",
+      "answers": [
+        "A) Modifier directement en production",
+        "B) Cartographier les dépendances et évaluer les effets de bord",
+        "C) Demander l'avis des utilisateurs uniquement"
+      ],
+      "correctAnswer": "2",
+      "coefficient": "1"
+    },
+    {
+      "text": "**Question 16**: Dans l'analyse des données, que permet la normalisation d'une base de données ?",
+      "answers": [
+        "A) Accélérer toutes les requêtes",
+        "B) Éliminer la redondance et assurer la cohérence des données",
+        "C) Réduire la taille physique uniquement"
+      ],
+      "correctAnswer": "2",
+      "coefficient": "1"
+    },
+    {
+      "text": "**Question 17**: Pour analyser les besoins d'un nouveau système, quelle technique d'interview privilégier ?",
+      "answers": [
+        "A) Questions fermées uniquement",
+        "B) Mix de questions ouvertes et fermées avec écoute active",
+        "C) Questionnaire écrit uniquement"
+      ],
+      "correctAnswer": "2",
+      "coefficient": "1"
+    },
+    {
+      "text": "**Question 18**: Dans l'analyse de la montée en charge (scalabilité), quelle approche distinguer ?",
+      "answers": [
+        "A) Scalabilité verticale (plus de puissance) vs horizontale (plus de serveurs)",
+        "B) Scalabilité rapide vs lente",
+        "C) Scalabilité interne vs externe"
+      ],
+      "correctAnswer": "1",
+      "coefficient": "1"
+    },
+    {
+      "text": "**Question 19**: Un bug critique impacte la production. Quelle approche d'analyse adopter ?",
+      "answers": [
+        "A) Analyser toutes les causes possibles avant d'agir",
+        "B) Appliquer une solution temporaire puis analyser la cause racine",
+        "C) Attendre la prochaine version pour corriger"
+      ],
+      "correctAnswer": "2",
+      "coefficient": "1"
+    },
+    {
+      "text": "**Question 20**: Dans l'analyse de la reprise après sinistre (disaster recovery), quel indicateur est crucial ?",
+      "answers": [
+        "A) Le coût de la solution uniquement",
+        "B) RTO (Recovery Time Objective) et RPO (Recovery Point Objective)",
+        "C) Le nombre de sauvegardes par jour"
+      ],
+      "correctAnswer": "2",
+      "coefficient": "1"
+    }
+  ]
+}

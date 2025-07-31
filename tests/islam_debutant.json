@@ -1,0 +1,106 @@
+{
+  "title": "Test de Connaissances Générales sur l'Islam Niveau débutant",
+  "totalQuestions": 10,
+  "questions": [
+    {
+      "text": "**Question 1**: Quel est le livre sacré de l'islam ?",
+      "answers": [
+        "A) Le Talmud",
+        "B) Le Coran",
+        "C) La Bible"
+      ],
+      "correctAnswer": "2",
+      "coefficient": "1"
+    },
+    {
+      "text": "**Question 2**: Combien y a-t-il de piliers dans l'islam ?",
+      "answers": [
+        "A) 3",
+        "B) 5",
+        "C) 7"
+      ],
+      "correctAnswer": "2",
+      "coefficient": "1"
+    },
+    {
+      "text": "**Question 3**: Comment s'appelle la période de jeûne dans l'islam ?",
+      "answers": [
+        "A) Ramadan",
+        "B) Hajj",
+        "C) Zakat"
+      ],
+      "correctAnswer": "1",
+      "coefficient": "1"
+    },
+    {
+      "text": "**Question 4**: Quelle ville est considérée comme la plus sainte dans l'islam ?",
+      "answers": [
+        "A) Médine",
+        "B) Jérusalem",
+        "C) La Mecque"
+      ],
+      "correctAnswer": "3",
+      "coefficient": "1"
+    },
+    {
+      "text": "**Question 5**: Comment s'appelle la prière rituelle effectuée cinq fois par jour ?",
+      "answers": [
+        "A) Salat",
+        "B) Shahada",
+        "C) Sawm"
+      ],
+      "correctAnswer": "1",
+      "coefficient": "1"
+    },
+    {
+      "text": "**Question 6**: Qui est considéré comme le dernier prophète de l'islam ?",
+      "answers": [
+        "A) Ibrahim (Abraham)",
+        "B) Issa (Jésus)",
+        "C) Muhammad"
+      ],
+      "correctAnswer": "3",
+      "coefficient": "1"
+    },
+    {
+      "text": "**Question 7**: Comment appelle-t-on le pèlerinage à La Mecque que tout musulman doit effectuer au moins une fois dans sa vie ?",
+      "answers": [
+        "A) Zakat",
+        "B) Hajj",
+        "C) Ihram"
+      ],
+      "correctAnswer": "2",
+      "coefficient": "1"
+    },
+    {
+      "text": "**Question 8**: Quel est le jour saint hebdomadaire en islam ?",
+      "answers": [
+        "A) Samedi",
+        "B) Dimanche",
+        "C) Vendredi"
+      ],
+      "correctAnswer": "3",
+      "coefficient": "1"
+    },
+    {
+      "text": "**Question 9**: Comment s'appelle l'aumône obligatoire dans l'islam ?",
+      "answers": [
+        "A) Zakat",
+        "B) Sadaqa",
+        "C) Fitrana"
+      ],
+      "correctAnswer": "1",
+      "coefficient": "1"
+    },
+    {
+      "text": "**Question 10**: Quelle fête marque la fin du Ramadan ?",
+      "answers": [
+        "A) Aïd al-Adha",
+        "B) Aïd al-Fitr",
+        "C) Mawlid"
+      ],
+      "correctAnswer": "2",
+      "coefficient": "1"
+    }
+  ]
+}

@@ -1,0 +1,206 @@
+{
+  "title": "Test de connaissances en Histoire de la civilisation arabo-musulmane - Niveau Intermédiaire",
+  "totalQuestions": 20,
+  "questions": [
+    {
+      "text": "**Question 1**: Quel calife omeyyade a initié la première traduction systématique des œuvres grecques en arabe ?",
+      "answers": [
+        "A) Mu'awiya Ier",
+        "B) Abd al-Malik",
+        "C) Umar ibn Abd al-Aziz"
+      ],
+      "correctAnswer": "2",
+      "coefficient": "1"
+    },
+    {
+      "text": "**Question 2**: Quelle école juridique (madhab) a été fondée par l'imam Malik ibn Anas ?",
+      "answers": [
+        "A) L'école hanafite",
+        "B) L'école malékite",
+        "C) L'école shafiite"
+      ],
+      "correctAnswer": "2",
+      "coefficient": "1"
+    },
+    {
+      "text": "**Question 3**: Qui était Al-Tabari et quelle était sa contribution majeure ?",
+      "answers": [
+        "A) Un médecin, auteur du Canon de la médecine",
+        "B) Un historien, auteur de l'Histoire des prophètes et des rois",
+        "C) Un philosophe, commentateur d'Aristote"
+      ],
+      "correctAnswer": "2",
+      "coefficient": "1"
+    },
+    {
+      "text": "**Question 4**: Dans quel contexte historique s'est développé le mouvement des Mu'tazila ?",
+      "answers": [
+        "A) Sous le califat omeyyade pour combattre les hérésies",
+        "B) Sous les premiers Abbassides pour rationaliser la théologie",
+        "C) Sous les Fatimides pour défendre le shiisme"
+      ],
+      "correctAnswer": "2",
+      "coefficient": "1"
+    },
+    {
+      "text": "**Question 5**: Quelle était la particularité du système administratif des Abbassides par rapport aux Omeyyades ?",
+      "answers": [
+        "A) L'arabisation complète de l'administration",
+        "B) L'influence persane et le système du vizirat",
+        "C) La décentralisation administrative"
+      ],
+      "correctAnswer": "2",
+      "coefficient": "1"
+    },
+    {
+      "text": "**Question 6**: Qui était Ibn Khaldun et quelle est sa contribution à l'historiographie ?",
+      "answers": [
+        "A) Un chroniqueur des croisades, auteur de récits détaillés",
+        "B) Le fondateur de la sociologie historique avec la Muqaddima",
+        "C) Un biographe des califes abbassides"
+      ],
+      "correctAnswer": "2",
+      "coefficient": "1"
+    },
+    {
+      "text": "**Question 7**: Quelle dynastie a établi le califat fatimide et quelle était sa légitimité ?",
+      "answers": [
+        "A) Les Ayyoubides, par conquête militaire",
+        "B) Les Fatimides, par descendance d'Ali et Fatima",
+        "C) Les Mamelouks, par coup d'État"
+      ],
+      "correctAnswer": "2",
+      "coefficient": "1"
+    },
+    {
+      "text": "**Question 8**: Quel rôle a joué la ville de Cordoue sous Abd al-Rahman III ?",
+      "answers": [
+        "A) Capitale rivale de Bagdad et centre culturel majeur",
+        "B) Simple place forte militaire",
+        "C) Centre de pèlerinage religieux"
+      ],
+      "correctAnswer": "1",
+      "coefficient": "1"
+    },
+    {
+      "text": "**Question 9**: Qu'est-ce que la 'fitna' dans l'histoire islamique primitive ?",
+      "answers": [
+        "A) Une période de guerre civile et de divisions",
+        "B) Un mouvement de réforme religieuse",
+        "C) Une expansion territoriale rapide"
+      ],
+      "correctAnswer": "1",
+      "coefficient": "1"
+    },
+    {
+      "text": "**Question 10**: Quel impact a eu la fondation de Bagdad par Al-Mansur en 762 ?",
+      "answers": [
+        "A) La création d'un nouveau centre commercial",
+        "B) Le symbole du pouvoir abbasside et nouveau centre du monde musulman",
+        "C) L'établissement d'une nouvelle école juridique"
+      ],
+      "correctAnswer": "2",
+      "coefficient": "1"
+    },
+    {
+      "text": "**Question 11**: Comment les Omeyyades d'Espagne ont-ils échappé au massacre abbasside ?",
+      "answers": [
+        "A) Abd al-Rahman Ier a fui et établi un émirat indépendant",
+        "B) Ils se sont convertis au shiisme",
+        "C) Ils ont négocié un traité de paix"
+      ],
+      "correctAnswer": "1",
+      "coefficient": "1"
+    },
+    {
+      "text": "**Question 12**: Quelle était la doctrine théologique d'Al-Ash'ari ?",
+      "answers": [
+        "A) Le rationalisme complet (Mu'tazila)",
+        "B) Le traditionalisme strict (Hanbalisme)",
+        "C) Une synthèse entre raison et tradition"
+      ],
+      "correctAnswer": "3",
+      "coefficient": "1"
+    },
+    {
+      "text": "**Question 13**: Quel fut l'apport d'Al-Khawarizmi aux mathématiques ?",
+      "answers": [
+        "A) L'invention de la géométrie analytique",
+        "B) Le développement de l'algèbre et des algorithmes",
+        "C) La découverte du calcul différentiel"
+      ],
+      "correctAnswer": "2",
+      "coefficient": "1"
+    },
+    {
+      "text": "**Question 14**: Comment s'appelait le mouvement de traduction à Bagdad sous les Abbassides ?",
+      "answers": [
+        "A) Le mouvement de la Nahda",
+        "B) Le mouvement de traduction de Bayt al-Hikma",
+        "C) L'école de Bagdad"
+      ],
+      "correctAnswer": "2",
+      "coefficient": "1"
+    },
+    {
+      "text": "**Question 15**: Quelle était la spécificité du soufisme dans la civilisation islamique ?",
+      "answers": [
+        "A) Un mouvement politique révolutionnaire",
+        "B) Une voie mystique et spirituelle de l'Islam",
+        "C) Une école juridique rigoriste"
+      ],
+      "correctAnswer": "2",
+      "coefficient": "1"
+    },
+    {
+      "text": "**Question 16**: Qui était Saladin (Salah ad-Din) et quel fut son rôle historique ?",
+      "answers": [
+        "A) Un calife abbasside réformateur",
+        "B) Le fondateur de la dynastie ayyoubide qui reprit Jérusalem",
+        "C) Un philosophe andalou"
+      ],
+      "correctAnswer": "2",
+      "coefficient": "1"
+    },
+    {
+      "text": "**Question 17**: Quelle était la fonction des 'dhimmis' dans la société islamique médiévale ?",
+      "answers": [
+        "A) Les esclaves convertis à l'Islam",
+        "B) Les gens du Livre protégés avec un statut particulier",
+        "C) Les soldats mercenaires"
+      ],
+      "correctAnswer": "2",
+      "coefficient": "1"
+    },
+    {
+      "text": "**Question 18**: Comment les Mamelouks sont-ils arrivés au pouvoir en Égypte ?",
+      "answers": [
+        "A) Par héritage dynastique",
+        "B) Par coup d'État militaire d'esclaves-soldats",
+        "C) Par élection démocratique"
+      ],
+      "correctAnswer": "2",
+      "coefficient": "1"
+    },
+    {
+      "text": "**Question 19**: Quel était le système monétaire de référence dans le monde musulman médiéval ?",
+      "answers": [
+        "A) Le dinar d'or et le dirham d'argent",
+        "B) Le solidus byzantin",
+        "C) Le denier carolingien"
+      ],
+      "correctAnswer": "1",
+      "coefficient": "1"
+    },
+    {
+      "text": "**Question 20**: Quelle fut la conséquence de la prise de Bagdad par les Mongols en 1258 ?",
+      "answers": [
+        "A) Le renforcement du califat abbasside",
+        "B) La fin officielle du califat abbasside de Bagdad",
+        "C) L'établissement d'une nouvelle dynastie arabe"
+      ],
+      "correctAnswer": "2",
+      "coefficient": "1"
+    }
+  ]
+}

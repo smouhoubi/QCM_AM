@@ -1,0 +1,206 @@
+{
+  "title": "Test de connaissances en Histoire de la civilisation arabo-musulmane - Niveau Avancé",
+  "totalQuestions": 20,
+  "questions": [
+    {
+      "text": "**Question 1**: Analysez l'évolution du concept de 'bid'a' (innovation) de l'époque des Compagnons jusqu'à l'époque d'Al-Shatibi. Quelle école a développé la théorie la plus nuancée ?",
+      "answers": [
+        "A) L'école hanbalite avec Ibn Taymiyya",
+        "B) L'école malékite avec Al-Shatibi et sa théorie des Maqasid",
+        "C) L'école ash'arite avec Al-Ghazali"
+      ],
+      "correctAnswer": "2",
+      "coefficient": "1"
+    },
+    {
+      "text": "**Question 2**: Dans quelle mesure la 'mihna' (inquisition) d'Al-Ma'mun a-t-elle influencé le développement ultérieur de la théologie sunnite ?",
+      "answers": [
+        "A) Elle a renforcé définitivement le rationalisme mu'tazilite",
+        "B) Elle a provoqué une réaction traditionaliste et l'émergence de l'ash'arisme",
+        "C) Elle n'a eu aucun impact durable sur la théologie"
+      ],
+      "correctAnswer": "2",
+      "coefficient": "1"
+    },
+    {
+      "text": "**Question 3**: Quelle était la nature exacte de la controverse autour du statut du Coran selon les écoles théologiques des IXe-Xe siècles ?",
+      "answers": [
+        "A) Coran créé (Mu'tazila) vs incréé (Traditionalistes)",
+        "B) Coran révélé vs inspiré",
+        "C) Coran arabe vs traductions"
+      ],
+      "correctAnswer": "1",
+      "coefficient": "1"
+    },
+    {
+      "text": "**Question 4**: Comment Ibn Sina a-t-il concilié la philosophie aristotélicienne avec la cosmologie islamique dans sa théorie de l'émanation ?",
+      "answers": [
+        "A) Par une hiérarchie de dix intelligences émanant de l'Un",
+        "B) Par le rejet complet d'Aristote",
+        "C) Par l'adaptation littérale des textes coraniques"
+      ],
+      "correctAnswer": "1",
+      "coefficient": "1"
+    },
+    {
+      "text": "**Question 5**: Quelle fut la contribution spécifique d'Ibn Rushd (Averroès) au débat sur le rapport entre philosophie et religion ?",
+      "answers": [
+        "A) La théorie de la double vérité",
+        "B) La doctrine de l'accord nécessaire entre vérité philosophique et religieuse",
+        "C) Le rejet total de la philosophie"
+      ],
+      "correctAnswer": "2",
+      "coefficient": "1"
+    },
+    {
+      "text": "**Question 6**: Analysez l'impact de la 'Tahafut al-Falasifa' d'Al-Ghazali sur l'évolution de la pensée islamique. Quelle fut sa critique principale ?",
+      "answers": [
+        "A) L'impossibilité de concilier raison et foi",
+        "B) L'incohérence interne des philosophes sur la causalité et l'éternité du monde",
+        "C) L'inutilité de la logique en théologie"
+      ],
+      "correctAnswer": "2",
+      "coefficient": "1"
+    },
+    {
+      "text": "**Question 7**: Comment le système des 'iqta' sous les Ayyoubides et les Mamelouks différait-il du système féodal européen contemporain ?",
+      "answers": [
+        "A) L'iqta était héréditaire contrairement au fief",
+        "B) L'iqta était révocable et non-héréditaire, lié au service militaire",
+        "C) Il n'y avait aucune différence structurelle"
+      ],
+      "correctAnswer": "2",
+      "coefficient": "1"
+    },
+    {
+      "text": "**Question 8**: Quelle était la particularité du système jurisprudentiel développé par l'école zahirite d'Ibn Hazm ?",
+      "answers": [
+        "A) L'interprétation littérale stricte sans analogie (qiyas)",
+        "B) L'usage exclusif de l'opinion personnelle (ra'y)",
+        "C) La primauté absolue du consensus (ijma')"
+      ],
+      "correctAnswer": "1",
+      "coefficient": "1"
+    },
+    {
+      "text": "**Question 9**: Dans le contexte de la réforme almohade, quelle était la doctrine théologique de Ibn Tumart ?",
+      "answers": [
+        "A) Un ash'arisme orthodoxe",
+        "B) Un unitarisme strict (tawhid) opposé à l'anthropomorphisme",
+        "C) Un soufisme mystique"
+      ],
+      "correctAnswer": "2",
+      "coefficient": "1"
+    },
+    {
+      "text": "**Question 10**: Comment Ibn Khaldun a-t-il théorisé les cycles de l'histoire dans sa 'Muqaddima' ?",
+      "answers": [
+        "A) Par la succession linéaire des civilisations",
+        "B) Par le concept d'asabiyya (cohésion sociale) et les cycles générationnels",
+        "C) Par la providence divine uniquement"
+      ],
+      "correctAnswer": "2",
+      "coefficient": "1"
+    },
+    {
+      "text": "**Question 11**: Quelle était the spécificité de l'école de Bagdad en matière de traduction par rapport à celle de Cordoue ?",
+      "answers": [
+        "A) Bagdad privilégiait le grec, Cordoue le latin",
+        "B) Bagdad se concentrait sur la philosophie, Cordoue sur les sciences",
+        "C) Bagdad traduisait du grec et du persan, Cordoue développait la transmission vers l'Occident latin"
+      ],
+      "correctAnswer": "3",
+      "coefficient": "1"
+    },
+    {
+      "text": "**Question 12**: Analysez l'innovation d'Al-Biruni en matière de méthode scientifique. Quelle fut sa contribution majeure ?",
+      "answers": [
+        "A) L'introduction de l'expérimentation contrôlée",
+        "B) Le développement de l'observation empirique systématique et comparative",
+        "C) L'invention de nouveaux instruments"
+      ],
+      "correctAnswer": "2",
+      "coefficient": "1"
+    },
+    {
+      "text": "**Question 13**: Comment la doctrine ismaélienne a-t-elle influencé l'organisation politique des Fatimides ?",
+      "answers": [
+        "A) Par un système républicain",
+        "B) Par une hiérarchie initiatique et l'Imam-calife comme guide infaillible",
+        "C) Par la séparation des pouvoirs religieux et temporels"
+      ],
+      "correctAnswer": "2",
+      "coefficient": "1"
+    },
+    {
+      "text": "**Question 14**: Quelle était la nature du conflit entre Ibn Taymiyya et les autorités mameloukes de son époque ?",
+      "answers": [
+        "A) Un conflit purement politique",
+        "B) Sa critique du soufisme populaire et des innovations religieuses",
+        "C) Son opposition à la guerre sainte"
+      ],
+      "correctAnswer": "2",
+      "coefficient": "1"
+    },
+    {
+      "text": "**Question 15**: Dans quelle mesure le concept de 'maslaha' (intérêt public) a-t-il évolué de Al-Ghazali à Al-Shatibi ?",
+      "answers": [
+        "A) D'un principe secondaire à un principe fondamental du droit islamique",
+        "B) D'un concept politique à un concept strictement religieux",
+        "C) Il n'y a pas eu d'évolution significative"
+      ],
+      "correctAnswer": "1",
+      "coefficient": "1"
+    },
+    {
+      "text": "**Question 16**: Comment l'œuvre d'Ibn al-Shatir a-t-elle influencé le développement de l'astronomie européenne ?",
+      "answers": [
+        "A) Par ses critiques du système ptoléméen et ses modèles géométriques repris par Copernic",
+        "B) Par l'invention du télescope",
+        "C) Par ses tables astronomiques uniquement"
+      ],
+      "correctAnswer": "1",
+      "coefficient": "1"
+    },
+    {
+      "text": "**Question 17**: Analysez la contribution d'Ibn al-Haytham (Alhazen) à la révolution de la méthodologie scientifique :",
+      "answers": [
+        "A) L'introduction de la méthode expérimentale systématique en optique",
+        "B) Le développement des mathématiques pures",
+        "C) L'invention de nouveaux instruments de mesure"
+      ],
+      "correctAnswer": "1",
+      "coefficient": "1"
+    },
+    {
+      "text": "**Question 18**: Quelle était la particularité du système d'enseignement dans les madrasas nizamiennes fondées par Nizam al-Mulk ?",
+      "answers": [
+        "A) L'enseignement exclusif des sciences religieuses",
+        "B) Un curriculum standardisé combinant sciences religieuses et formation administrative",
+        "C) L'enseignement en langue persane uniquement"
+      ],
+      "correctAnswer": "2",
+      "coefficient": "1"
+    },
+    {
+      "text": "**Question 19**: Comment Ibn Arabi a-t-il systématisé la doctrine de 'wahdat al-wujud' (unicité de l'être) ?",
+      "answers": [
+        "A) Par un monisme panthéiste strict",
+        "B) Par une théorie complexe des manifestations divines et des niveaux d'être",
+        "C) Par le rejet de toute métaphysique"
+      ],
+      "correctAnswer": "2",
+      "coefficient": "1"
+    },
+    {
+      "text": "**Question 20**: Évaluez l'impact de la chute de Bagdad (1258) sur l'évolution des centres intellectuels du monde musulman :",
+      "answers": [
+        "A) Le déclin irréversible de la vie intellectuelle musulmane",
+        "B) Le déplacement vers de nouveaux centres : Le Caire, Damas, et l'Andalus",
+        "C) La renaissance immédiate sous les Mongols convertis"
+      ],
+      "correctAnswer": "2",
+      "coefficient": "1"
+    }
+  ]
+}

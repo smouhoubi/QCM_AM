@@ -3,7 +3,7 @@
     {
       "id": "islam1",
       "title": "Test de Connaissances Générales sur l'Islam Niveau débutant",
-      "description": "Test de connaissances de base sur l'Islam - Idéal pour débuter",
+      "description": "Test de connaissances sur l'Islam - Idéal pour débuter",
       "totalQuestions": 10,
       "filename": "islam_debutant.json",
       "difficulty": "facile",
@@ -15,10 +15,22 @@
     {
       "id": "islam2",
       "title": "Test de Connaissances Générales sur l'Islam Niveau intermédiaire",
-      "description": "Test de connaissances de base sur l'Islam - niveau intermédiaire",
+      "description": "Test de connaissances sur l'Islam - niveau intermédiaire",
       "totalQuestions": 10,
       "filename": "islam_intermediaire.json",
       "difficulty": "moyen",
+      "category": "Religions",
+      "author": "Admin",
+      "dateCreated": "2024-01-15",
+      "estimatedTime": "5 minutes"
+    },
+    {
+      "id": "islam3",
+      "title": "Test de Connaissances Générales sur l'Islam Niveau Avancé",
+      "description": "Test de connaissances sur l'Islam - niveau Avancé",
+      "totalQuestions": 10,
+      "filename": "islam_avance.json",
+      "difficulty": "grande",
       "category": "Religions",
       "author": "Admin",
       "dateCreated": "2024-01-15",
@@ -35,6 +47,68 @@
       "author": "Public",
       "dateCreated": "2024-01-22",
       "estimatedTime": "20 minutes"
+    },
+    {
+      "id": "histoire2",
+      "title": "Histoire de la civilisation arabo-musulmane - Niveau Intermédiaire",
+      "description": "Test de connaissances en Histoire de la civilisation arabo-musulmane - Niveau Intermédiaire",
+      "totalQuestions": 20,
+      "filename": "civilisation_arabo_musulmane_intermediaire.json",
+      "difficulty": "moyen",
+      "category": "Histoire",
+      "author": "Public",
+      "dateCreated": "2024-01-22",
+      "estimatedTime": "20 minutes"
+    },
+    {
+      "id": "histoire3",
+      "title": "Histoire de la civilisation arabo-musulmane - Niveau Avancé",
+      "description": "Test de connaissances en Histoire de la civilisation arabo-musulmane - Niveau Avancé",
+      "totalQuestions": 20,
+      "filename": "civilisation_arabo_musulmane_avance.json",
+      "difficulty": "grande",
+      "category": "Histoire",
+      "author": "Public",
+      "dateCreated": "2024-01-22",
+      "estimatedTime": "20 minutes"
+    },
+    {
+      "id": "histoire4",
+      "title": "Test de connaissances en Histoire de Napoléon - Niveau Débutant",
+      "description": "Test de connaissances en Histoire de Napoléon - Niveau Débutant",
+      "totalQuestions": 20,
+      "filename": "histoire_napoleon_debutant.json",
+      "difficulty": "facile",
+      "category": "Histoire",
+      "author": "Public",
+      "dateCreated": "2024-01-22",
+      "estimatedTime": "20 minutes"
+    },
+    {
+     "id": "histoire5",
+      "title": "Test de connaissances en Histoire de Napoléon - Niveau Intermédiaire",
+      "description": "Test de connaissances en Histoire de Napoléon - Niveau Intermédiaire",
+      "totalQuestions": 20,
+      "filename": "histoire_napoleon_intermediaire.json",
+      "difficulty": "moyen",
+      "category": "Histoire",
+      "author": "Public",
+      "dateCreated": "2024-01-22",
+      "estimatedTime": "20 minutes"
+    },
+    {
+      "id": "histoire6",
+      "title": "Test de connaissances en Histoire de Napoléon - Niveau Avancé",
+      "description": "Test de connaissances en Histoire de Napoléon - Niveau Avancé",
+      "totalQuestions": 20,
+      "filename": "histoire_napoleon_avance.json",
+      "difficulty": "grande",
+      "category": "Histoire",
+      "author": "Public",
+      "dateCreated": "2024-01-22",
+      "estimatedTime": "20 minutes"
     }
+	
+
   ]
 }
