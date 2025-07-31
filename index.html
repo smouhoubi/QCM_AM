@@ -308,6 +308,20 @@
             color: #0c5460;
             border: 1px solid #bee5eb;
         }
+        .status-warning {
+            background-color: #fff3cd;
+            color: #856404;
+            border: 1px solid #ffeaa7;
+        }
+        .server-info {
+            background-color: #e9ecef;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 6px;
+            font-size: 14px;
+            color: #495057;
+            border-left: 4px solid #6c757d;
+        }
         @media (max-width: 768px) {
             .container {
                 padding: 20px;
@@ -335,6 +349,12 @@
             
             <div class="directory-path">
                 <strong>📁 Répertoire des tests :</strong> ./tests/
+            </div>
+            
+            <!-- Information sur le serveur -->
+            <div class="server-info">
+                <strong>ℹ️ Mode de fonctionnement :</strong> 
+                <span id="server-mode">Détection automatique en cours...</span>
             </div>
             
             <!-- Liste des tests disponibles -->
@@ -447,17 +467,36 @@
         let startTime = null;
         let timerInterval = null;
         let totalTimeInSeconds = 0;
+        let isServerMode = false;
         
         // Chemins des répertoires
         const TESTS_DIRECTORY = './tests';
         const RESULTS_DIRECTORY = './results';
+        
+        // Fonction pour détecter si on est en mode serveur
+        function detectServerMode() {
+            // Vérifier si on accède via http/https ou file://
+            const isFileProtocol = window.location.protocol === 'file:';
+            const hasOrigin = window.location.origin && window.location.origin !== 'null';
+            
+            isServerMode = !isFileProtocol && hasOrigin;
+            
+            const serverModeElement = document.getElementById('server-mode');
+            if (isServerMode) {
+                serverModeElement.innerHTML = '🌐 Mode serveur détecté - Toutes les fonctionnalités sont disponibles';
+                serverModeElement.parentElement.className = 'status-success';
+            } else {
+                serverModeElement.innerHTML = '📁 Mode fichier local - Sauvegarde serveur indisponible, téléchargement uniquement';
+                serverModeElement.parentElement.className = 'status-warning';
+            }
+        }
         
         // Fonction pour afficher les messages de statut
         function showStatusMessage(message, type = 'info') {
             const statusContainer = document.getElementById('status-messages');
             const messageDiv = document.createElement('div');
             messageDiv.className = `status-message status-${type}`;
-            messageDiv.textContent = message;
+            messageDiv.innerHTML = message;
             
             statusContainer.appendChild(messageDiv);
             
@@ -474,6 +513,13 @@
             const loadingMessage = document.getElementById('loading-message');
             loadingMessage.textContent = "🔄 Chargement des tests disponibles...";
             
+            if (!isServerMode) {
+                // En mode fichier local, utiliser directement les tests de démonstration
+                showStatusMessage('📁 Mode fichier local : utilisation des tests de démonstration', 'info');
+                loadDemoTests();
+                return;
+            }
+            
             // Tentative de récupération via une API backend (si disponible)
             fetch(`${TESTS_DIRECTORY}/index.json`)
                 .then(response => {
@@ -488,20 +534,14 @@
                     showStatusMessage('✅ Tests chargés depuis le serveur', 'success');
                 })
                 .catch(error => {
-                    console.log('Chargement depuis index.json échoué, tentative de scan automatique:', error);
-                    
-                    // Tentative de scan automatique des fichiers (nécessiterait une API backend)
-                    attemptAutoScanTests();
+                    console.log('Chargement depuis index.json échoué, utilisation des tests de démonstration:', error);
+                    showStatusMessage('⚠️ Fichier index.json non trouvé, utilisation des tests de démonstration', 'warning');
+                    loadDemoTests();
                 });
         }
         
-        // Tentative de scan automatique (simulé pour la démo)
-        function attemptAutoScanTests() {
-            // Dans un environnement de production, ceci nécessiterait une API backend
-            // Pour la démo, on utilise une liste prédéfinie
-            
-            showStatusMessage('⚠️ Fichier index.json non trouvé, utilisation des tests de démonstration', 'info');
-            
+        // Charger les tests de démonstration
+        function loadDemoTests() {
             availableTests = [
                 {
                     id: "questions1",
@@ -639,465 +679,138 @@
             const selectedTest = availableTests[selectedTestIndex];
             showStatusMessage(`🔄 Chargement du test: ${selectedTest.title}...`, 'info');
             
-            fetch(`${TESTS_DIRECTORY}/${selectedTest.filename}`)
-                .then(response => {
-                    if (!response.ok) {
-                        throw new Error(`Impossible de charger ${selectedTest.filename}`);
-                    }
-                    return response.json();
-                })
-                .then(data => {
-                    qcmData = data;
-                    showTestInfo();
-                    showStatusMessage('✅ Test chargé avec succès!', 'success');
-                })
-                .catch(error => {
-                    console.log('Erreur de chargement, utilisation des données de démo:', error);
-                    showStatusMessage('⚠️ Fichier non trouvé, utilisation des données de démonstration', 'info');
-                    
-                    // Utiliser les données d'exemple pour la démonstration
-                    if (selectedTest.filename === "questions1.json") {
-                        const jsonContent = `{"title":"TEST MATIERE X","totalQuestions":3,"questions":[{"text":"Quelle est la capitale de la France ?","answers":["Paris","Lyon","Marseille"],"correctAnswer":"1","coefficient":1},{"text":"Combien font 2 + 2 ?","answers":["3","4","5"],"correctAnswer":"2","coefficient":2},{"text":"Quel est le plus grand océan ?","answers":["Atlantique","Indien","Pacifique"],"correctAnswer":"3","coefficient":3}]}`;
-                        
-                        try {
-                            qcmData = JSON.parse(jsonContent);
-                            showTestInfo();
-                        } catch (error) {
-                            showStatusMessage('❌ Erreur lors du chargement du test: ' + error.message, 'error');
+            if (isServerMode) {
+                // Tentative de chargement depuis le serveur
+                fetch(`${TESTS_DIRECTORY}/${selectedTest.filename}`)
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error(`Impossible de charger ${selectedTest.filename}`);
                         }
-                    } else {
-                        // Générer des données fictives
-                        qcmData = {
-                            title: selectedTest.title,
-                            totalQuestions: selectedTest.totalQuestions,
-                            questions: []
-                        };
-                        
-                        // Générer des questions fictives
-                        for (let i = 0; i < selectedTest.totalQuestions; i++) {
-                            qcmData.questions.push({
-                                text: `Question ${i+1} du test "${selectedTest.title}" - Ceci est une question de démonstration.`,
-                                answers: [
-                                    `Réponse A pour la question ${i+1}`,
-                                    `Réponse B pour la question ${i+1}`,
-                                    `Réponse C pour la question ${i+1}`
-                                ],
-                                correctAnswer: (Math.floor(Math.random() * 3) + 1).toString(),
-                                coefficient: Math.floor(Math.random() * 3) + 1
-                            });
-                        }
-                        
+                        return response.json();
+                    })
+                    .then(data => {
+                        qcmData = data;
                         showTestInfo();
-                    }
-                });
-        }
-        
-        // Sauvegarder les résultats sur le serveur
-        function saveResultsToServer(testResults) {
-            const filename = `result-${testResults.candidateName.replace(/[^a-zA-Z0-9]/g, '-')}-${testResults.testId || 'test'}-${new Date().toISOString().split('T')[0]}-${Date.now()}.json`;
-            
-            // Tentative de sauvegarde sur le serveur (nécessite une API backend)
-            fetch(`${RESULTS_DIRECTORY}/${filename}`, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(testResults, null, 2)
-            })
-            .then(response => {
-                if (response.ok) {
-                    showStatusMessage('✅ Résultats sauvegardés sur le serveur', 'success');
-                } else {
-                    throw new Error('Erreur de sauvegarde serveur');
-                }
-            })
-            .catch(error => {
-                console.log('Sauvegarde serveur échouée:', error);
-                showStatusMessage('⚠️ Sauvegarde serveur échouée, résultats disponibles en téléchargement uniquement', 'info');
-            });
-        }
-        
-        // Actualiser la liste des tests
-        function refreshAvailableTests() {
-            selectedTestIndex = -1;
-            document.getElementById('load-selected-test').disabled = true;
-            showStatusMessage('🔄 Actualisation de la liste des tests...', 'info');
-            fetchAvailableTests();
-        }
-        
-        // Afficher les informations du test
-        function showTestInfo() {
-            document.getElementById('load-section').classList.add('hidden');
-            document.getElementById('qcm-info').classList.remove('hidden');
-            
-            document.getElementById('qcm-title-display').textContent = qcmData.title;
-            document.getElementById('qcm-total-questions').textContent = qcmData.totalQuestions;
-        }
-        
-        // Retour à la liste des tests
-        function returnToTestList() {
-            document.getElementById('qcm-info').classList.add('hidden');
-            document.getElementById('load-section').classList.remove('hidden');
-        }
-        
-        // Charger un QCM depuis un fichier local
-        function loadQCMFromFile() {
-            const fileInput = document.getElementById('qcm-file');
-            
-            if (!fileInput.files || fileInput.files.length === 0) {
-                showStatusMessage('⚠️ Veuillez sélectionner un fichier.', 'error');
-                return;
-            }
-            
-            const file = fileInput.files[0];
-            const reader = new FileReader();
-            
-            reader.onload = function(event) {
-                try {
-                    qcmData = JSON.parse(event.target.result);
-                    
-                    // Vérifier si c'est un format de QCM valide
-                    if (!qcmData.title || !qcmData.totalQuestions || !Array.isArray(qcmData.questions)) {
-                        throw new Error('Format de fichier incorrect.');
-                    }
-                    
-                    showTestInfo();
-                    showStatusMessage('✅ Fichier QCM chargé avec succès!', 'success');
-                    
-                } catch (error) {
-                    showStatusMessage('❌ Le fichier sélectionné n\'est pas un QCM valide: ' + error.message, 'error');
-                }
-            };
-            
-            reader.readAsText(file);
-        }
-        
-        // Formater le temps en minutes:secondes
-        function formatTime(totalSeconds) {
-            const minutes = Math.floor(totalSeconds / 60);
-            const seconds = totalSeconds % 60;
-            return `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
-        }
-        
-        // Mettre à jour l'affichage du chronomètre
-        function updateTimer() {
-            const now = new Date();
-            const elapsedSeconds = Math.floor((now - startTime) / 1000);
-            totalTimeInSeconds = elapsedSeconds;
-            document.getElementById('test-timer').textContent = `⏱️ Temps: ${formatTime(elapsedSeconds)}`;
-        }
-        
-        // Démarrer le test
-        function startTest() {
-            candidateName = document.getElementById('candidate-name').value.trim();
-            
-            if (!candidateName) {
-                showStatusMessage('⚠️ Veuillez entrer votre nom.', 'error');
-                return;
-            }
-            
-            document.getElementById('qcm-info').classList.add('hidden');
-            document.getElementById('test-section').classList.remove('hidden');
-            
-            candidateAnswers = [];
-            currentQuestionIndex = 0;
-            document.getElementById('total-test-questions').textContent = qcmData.totalQuestions;
-            
-            // Démarrer le chronomètre
-            startTime = new Date();
-            clearInterval(timerInterval);
-            timerInterval = setInterval(updateTimer, 1000);
-            
-            displayTestQuestion();
-            showStatusMessage(`🚀 Test démarré pour ${candidateName}`, 'success');
-        }
-        
-        // Afficher la question courante
-        function displayTestQuestion() {
-            const question = qcmData.questions[currentQuestionIndex];
-            
-            document.getElementById('current-test-question').textContent = currentQuestionIndex + 1;
-            document.getElementById('test-question-text').textContent = question.text;
-            document.getElementById('test-coefficient').textContent = question.coefficient;
-            document.getElementById('test-answer1').textContent = question.answers[0];
-            document.getElementById('test-answer2').textContent = question.answers[1];
-            document.getElementById('test-answer3').textContent = question.answers[2];
-            
-            // Réinitialiser la sélection
-            selectedAnswer = null;
-            document.getElementById('next-button').disabled = true;
-            document.querySelectorAll('.answer-option').forEach(option => {
-                option.classList.remove('selected');
-            });
-            
-            // Mettre à jour la barre de progression
-            const progress = ((currentQuestionIndex) / qcmData.totalQuestions) * 100;
-            document.getElementById('progress').style.width = progress + '%';
-            
-            // Adapter le texte du bouton pour la dernière question
-            const nextButton = document.getElementById('next-button');
-            if (currentQuestionIndex === qcmData.totalQuestions - 1) {
-                nextButton.innerHTML = '🏁 Terminer le test';
+                        showStatusMessage('✅ Test chargé avec succès depuis le serveur!', 'success');
+                    })
+                    .catch(error => {
+                        console.log('Erreur de chargement depuis le serveur:', error);
+                        showStatusMessage('⚠️ Fichier non trouvé sur le serveur, utilisation des données de démonstration', 'warning');
+                        loadDemoTestData(selectedTest);
+                    });
             } else {
-                nextButton.innerHTML = '➡️ Question suivante';
+                // Mode fichier local : utiliser les données de démonstration
+                loadDemoTestData(selectedTest);
             }
         }
         
-        // Sélectionner une réponse
-        function selectAnswer(answerNumber) {
-            selectedAnswer = answerNumber.toString();
-            document.getElementById('next-button').disabled = false;
-            
-            // Mettre à jour la sélection visuelle
-            document.querySelectorAll('.answer-option').forEach((option, index) => {
-                if (index + 1 === answerNumber) {
-                    option.classList.add('selected');
-                } else {
-                    option.classList.remove('selected');
-                }
-            });
-        }
-        
-        // Sauvegarder la réponse et passer à la question suivante
-        function saveAnswer() {
-            if (selectedAnswer === null) {
-                showStatusMessage('⚠️ Veuillez sélectionner une réponse.', 'error');
-                return;
-            }
-            
-            candidateAnswers.push({
-                questionIndex: currentQuestionIndex,
-                questionText: qcmData.questions[currentQuestionIndex].text,
-                answer: selectedAnswer,
-                correctAnswer: qcmData.questions[currentQuestionIndex].correctAnswer,
-                coefficient: qcmData.questions[currentQuestionIndex].coefficient
-            });
-            
-            currentQuestionIndex++;
-            
-            if (currentQuestionIndex >= qcmData.totalQuestions) {
-                calculateAndDisplayResult();
+        // Charger les données de démonstration pour un test
+        function loadDemoTestData(selectedTest) {
+            if (selectedTest.filename === "questions1.json") {
+                qcmData = {
+                    title: "TEST MATIERE X",
+                    totalQuestions: 3,
+                    questions: [
+                        {
+                            text: "Quelle est la capitale de la France ?",
+                            answers: ["Paris", "Lyon", "Marseille"],
+                            correctAnswer: "1",
+                            coefficient: 1
+                        },
+                        {
+                            text: "Combien font 2 + 2 ?",
+                            answers: ["3", "4", "5"],
+                            correctAnswer: "2",
+                            coefficient: 2
+                        },
+                        {
+                            text: "Quel est le plus grand océan ?",
+                            answers: ["Atlantique", "Indien", "Pacifique"],
+                            correctAnswer: "3",
+                            coefficient: 3
+                        }
+                    ]
+                };
             } else {
-                displayTestQuestion();
+                // Générer des données fictives pour les autres tests
+                qcmData = {
+                    title: selectedTest.title,
+                    totalQuestions: selectedTest.totalQuestions,
+                    questions: []
+                };
+                
+                // Générer des questions fictives basées sur la catégorie
+                for (let i = 0; i < selectedTest.totalQuestions; i++) {
+                    const questionData = generateDemoQuestion(selectedTest.category, i + 1);
+                    qcmData.questions.push(questionData);
+                }
             }
+            
+            showTestInfo();
+            showStatusMessage('✅ Test de démonstration chargé avec succès!', 'success');
         }
         
-        // Calculer et afficher le résultat
-        function calculateAndDisplayResult() {
-            // Arrêter le chronomètre
-            clearInterval(timerInterval);
-            
-            let totalPoints = 0;
-            let earnedPoints = 0;
-            let correctAnswersCount = 0;
-            
-            candidateAnswers.forEach(answer => {
-                const coefficient = parseInt(answer.coefficient);
-                totalPoints += coefficient;
-                
-                if (answer.answer === answer.correctAnswer) {
-                    earnedPoints += coefficient;
-                    correctAnswersCount++;
-                }
-            });
-            
-            // Calcul de la note sur 20
-            const finalScore = Math.round((earnedPoints / totalPoints) * 20 * 100) / 100;
-            
-            document.getElementById('question-display').classList.add('hidden');
-            
-            // Mettre à jour la barre de progression à 100%
-            document.getElementById('progress').style.width = '100%';
-            
-            // Créer le résultat détaillé
-            const resultElement = document.getElementById('test-result');
-            
-            // Obtenir le temps total formaté
-            const formattedTime = formatTime(totalTimeInSeconds);
-            
-            // Obtenir l'appréciation selon la note
-            const appreciation = getAppreciation(finalScore);
-            
-            // Afficher le résultat
-            let resultHTML = `
-                <h3>🎯 Résultat du test</h3>
-                <div style="background-color: #f8f9fa; padding: 15px; border-radius: 8px; margin-bottom: 20px;">
-                    <p class="summary-item"><strong>👤 Candidat:</strong> ${candidateName}</p>
-                    <p class="summary-item"><strong>📝 Test:</strong> ${qcmData.title}</p>
-                    <p class="summary-item"><strong>📁 Source:</strong> ${TESTS_DIRECTORY}</p>
-                    <p class="summary-item"><strong>⏱️ Temps de réflexion:</strong> ${formattedTime}</p>
-                    <p class="summary-item"><strong>❓ Nombre de questions:</strong> ${qcmData.totalQuestions}</p>
-                    <p class="summary-item"><strong>✅ Bonnes réponses:</strong> ${correctAnswersCount} sur ${qcmData.totalQuestions}</p>
-                    <p class="summary-item" style="font-size: 18px; color: #27ae60;">
-                        <strong>🏆 Note obtenue: ${finalScore.toFixed(2)}/20</strong>
-                    </p>
-                    <p class="summary-item" style="font-style: italic; color: #7f8c8d;">
-                        ${appreciation}
-                    </p>
-                </div>
-                
-                <h4>📊 Détail des réponses:</h4>
-                <div class="result-details">
-            `;
-            
-            candidateAnswers.forEach((answer, index) => {
-                const isCorrect = answer.answer === answer.correctAnswer;
-                const letters = ['A', 'B', 'C'];
-                
-                resultHTML += `
-                    <div class="summary-item">
-                        <strong>Question ${index + 1}:</strong> ${answer.questionText}
-                        <br><span class="${isCorrect ? 'correct' : 'incorrect'}">
-                            ${isCorrect ? '✅' : '❌'} Votre réponse: ${letters[parseInt(answer.answer) - 1]} - ${isCorrect ? 'Correct' : 'Incorrect'}
-                        </span>
-                        ${!isCorrect ? `<br><span style="color: #27ae60;">✅ Bonne réponse: ${letters[parseInt(answer.correctAnswer) - 1]}</span>` : ''}
-                        <br><small>⚖️ Coefficient: ${answer.coefficient}</small>
-                    </div>
-                `;
-                if (index < candidateAnswers.length - 1) {
-                    resultHTML += '<hr>';
-                }
-            });
-            
-            resultHTML += '</div>';
-            
-            // Boutons d'actions
-            resultHTML += `
-                <div class="section">
-                    <div class="action-buttons">
-                        <button onclick="downloadResults()">
-                            💾 Télécharger les résultats
-                        </button>
-                        <button onclick="saveResults()" class="secondary">
-                            💽 Sauvegarder sur serveur
-                        </button>
-                        <button onclick="restartTest()">
-                            🔄 Nouveau test
-                        </button>
-                    </div>
-                </div>
-            `;
-            
-            resultElement.innerHTML = resultHTML;
-            resultElement.classList.remove('hidden');
-            
-            // Créer l'objet des résultats
-            const testResults = {
-                candidateName: candidateName,
-                testTitle: qcmData.title,
-                testId: availableTests[selectedTestIndex]?.id || 'unknown',
-                directoryPath: TESTS_DIRECTORY,
-                totalQuestions: qcmData.totalQuestions,
-                correctAnswers: correctAnswersCount,
-                score: finalScore.toFixed(2),
-                appreciation: appreciation,
-                timeSpent: {
-                    seconds: totalTimeInSeconds,
-                    formatted: formattedTime
+        // Générer une question de démonstration basée sur la catégorie
+        function generateDemoQuestion(category, questionNumber) {
+            const questionTemplates = {
+                'Mathématiques': {
+                    questions: [
+                        'Quelle est la valeur de x dans l\'équation 2x + 5 = 15 ?',
+                        'Combien font 15% de 200 ?',
+                        'Quelle est l\'aire d\'un cercle de rayon 5 cm ? (π ≈ 3,14)',
+                        'Quelle est la dérivée de x² ?'
+                    ],
+                    answers: [
+                        ['x = 5', 'x = 7', 'x = 10'],
+                        ['25', '30', '35'],
+                        ['78,5 cm²', '31,4 cm²', '15,7 cm²'],
+                        ['2x', 'x', '2']
+                    ]
                 },
-                detailedAnswers: candidateAnswers,
-                date: new Date().toISOString(),
-                timestamp: Date.now()
+                'Français': {
+                    questions: [
+                        'Quel est le féminin de "acteur" ?',
+                        'Quelle est la fonction du mot souligné : "Le chat MANGE sa pâtée" ?',
+                        'Comment s\'accorde le participe passé avec l\'auxiliaire être ?',
+                        'Quel est le pluriel de "cheval" ?'
+                    ],
+                    answers: [
+                        ['actrice', 'acteuse', 'acteure'],
+                        ['verbe', 'sujet', 'complément'],
+                        ['avec le sujet', 'avec le COD', 'jamais'],
+                        ['chevals', 'chevaux', 'chevaus']
+                    ]
+                },
+                'Culture': {
+                    questions: [
+                        'En quelle année a eu lieu la Révolution française ?',
+                        'Qui a peint "La Joconde" ?',
+                        'Quelle est la capitale de l\'Australie ?',
+                        'Combien y a-t-il de continents ?'
+                    ],
+                    answers: [
+                        ['1789', '1799', '1804'],
+                        ['Léonard de Vinci', 'Michel-Ange', 'Raphaël'],
+                        ['Canberra', 'Sydney', 'Melbourne'],
+                        ['5', '6', '7']
+                    ]
+                }
             };
             
-            // Sauvegarder en localStorage
-            localStorage.setItem('lastTestResults', JSON.stringify(testResults));
+            const defaultQuestions = [
+                'Question de démonstration sur le sujet',
+                'Exemple de question pour ce test',
+                'Question fictive pour la démonstration'
+            ];
             
-            showStatusMessage(`🎉 Test terminé! Note: ${finalScore.toFixed(2)}/20`, 'success');
-        }
-        
-        // Obtenir l'appréciation selon la note
-        function getAppreciation(score) {
-            if (score >= 18) return "🌟 Excellent! Performance exceptionnelle!";
-            if (score >= 16) return "🎉 Très bien! Très bonne maîtrise du sujet!";
-            if (score >= 14) return "👍 Bien! Bonne compréhension générale!";
-            if (score >= 12) return "🆗 Assez bien! Quelques lacunes à combler!";
-            if (score >= 10) return "📚 Passable! Il faut réviser davantage!";
-            if (score >= 8) return "⚠️ Insuffisant! Beaucoup de travail nécessaire!";
-            return "❌ Très insuffisant! Reprise complète du programme recommandée!";
-        }
-        
-        // Sauvegarder les résultats sur le serveur
-        function saveResults() {
-            const lastResults = JSON.parse(localStorage.getItem('lastTestResults'));
+            const template = questionTemplates[category];
+            let questionText, answers;
             
-            if (!lastResults) {
-                showStatusMessage('❌ Aucun résultat à sauvegarder.', 'error');
-                return;
-            }
-            
-            showStatusMessage('🔄 Sauvegarde des résultats en cours...', 'info');
-            saveResultsToServer(lastResults);
-        }
-        
-        // Télécharger les résultats
-        function downloadResults() {
-            const lastResults = JSON.parse(localStorage.getItem('lastTestResults'));
-            
-            if (!lastResults) {
-                showStatusMessage('❌ Aucun résultat disponible pour téléchargement.', 'error');
-                return;
-            }
-            
-            // Créer un fichier à télécharger
-            const resultsJson = JSON.stringify(lastResults, null, 2);
-            const blob = new Blob([resultsJson], { type: 'application/json' });
-            const url = URL.createObjectURL(blob);
-            
-            const filename = `qcm-result-${lastResults.candidateName.replace(/[^a-zA-Z0-9]/g, '-')}-${lastResults.testId}-${new Date().toISOString().split('T')[0]}.json`;
-            
-            const a = document.createElement('a');
-            a.href = url;
-            a.download = filename;
-            document.body.appendChild(a);
-            a.click();
-            document.body.removeChild(a);
-            URL.revokeObjectURL(url);
-            
-            showStatusMessage('💾 Résultats téléchargés avec succès!', 'success');
-        }
-        
-        // Recommencer un nouveau test
-        function restartTest() {
-            document.getElementById('test-section').classList.add('hidden');
-            document.getElementById('test-result').classList.add('hidden');
-            document.getElementById('load-section').classList.remove('hidden');
-            
-            // Réinitialiser les champs
-            document.getElementById('qcm-file').value = '';
-            document.getElementById('candidate-name').value = '';
-            
-            // Réinitialiser les variables
-            qcmData = {
-                title: '',
-                totalQuestions: 0,
-                questions: []
-            };
-            currentQuestionIndex = 0;
-            candidateAnswers = [];
-            candidateName = '';
-            selectedAnswer = null;
-            selectedTestIndex = -1;
-            startTime = null;
-            clearInterval(timerInterval);
-            totalTimeInSeconds = 0;
-            
-            // Réinitialiser l'affichage
-            document.getElementById('load-selected-test').disabled = true;
-            document.getElementById('progress').style.width = '0%';
-            
-            // Effacer les messages de statut
-            document.getElementById('status-messages').innerHTML = '';
-            
-            // Rafraîchir la liste des tests
-            refreshAvailableTests();
-        }
-        
-        // Initialisation au chargement de la page
-        window.onload = function() {
-            showStatusMessage('🚀 Application de tests de connaissances initialisée', 'success');
-            fetchAvailableTests();
-        };
-    </script>
-</body>
-</html>
+            if (template && template.questions.length > 0) {
+                const index = (questionNumber - 1) % template.questions.length;
+                questionText = template.questions[index];
+                answers = template.answers[index];
+            } else {
+                questionText = `Question ${questionNumber} du test "${category}" - Ceci est une question de démonstration.`;
+                answers = [
+                    `Réponse A pour la question ${
