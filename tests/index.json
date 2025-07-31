@@ -110,8 +110,8 @@
     },
     {
       "id": "informatique1",
-      "title": ""Test de Recrutement - Analyste en Informatique - Niveau Intermédiaire",
-      "description": ""Test de Recrutement - Analyste en Informatique - Niveau Intermédiaire",
+      "title": "Test de Recrutement - Analyste en Informatique - Niveau Intermédiaire",
+      "description": "Test de Recrutement - Analyste en Informatique - Niveau Intermédiaire",
       "totalQuestions": 20,
       "filename": "analyste_informatique_intermediaire.json",
       "difficulty": "moyen",
