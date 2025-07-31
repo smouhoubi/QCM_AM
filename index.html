@@ -89,728 +89,168 @@
             border-radius: 8px;
             border-left: 5px solid #27ae60;
         }
-        .hidden {
-            display: none;
-        }
-        .question-text {
-            font-size: 20px;
-            margin-bottom: 20px;
-            font-weight: bold;
-            color: #2c3e50;
-        }
-        .answer-option {
-            margin-bottom: 12px;
-            padding: 15px;
-            border: 2px solid #ecf0f1;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: all 0.3s;
-            background-color: #ffffff;
-        }
-        .answer-option:hover {
-            background-color: #f8f9fa;
-            border-color: #bdc3c7;
-        }
-        .answer-option.selected {
-            background-color: #ebf3fd;
-            border-color: #3498db;
-            box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
-        }
-        .coefficient {
-            font-style: italic;
-            color: #7f8c8d;
-            margin-top: 15px;
-            font-size: 14px;
-        }
-        .progress-bar {
-            height: 12px;
-            background-color: #ecf0f1;
-            border-radius: 6px;
-            margin-bottom: 20px;
-            overflow: hidden;
-        }
-        .progress {
-            height: 100%;
-            background-color: #27ae60;
-            border-radius: 6px;
-            width: 0%;
-            transition: width 0.3s ease;
-        }
-        .result-details {
-            margin-top: 20px;
-            padding: 15px;
-            background-color: #f8f9fa;
-            border-radius: 8px;
-            border: 1px solid #dee2e6;
-        }
-        .correct {
-            color: #27ae60;
-            font-weight: bold;
-        }
-        .incorrect {
-            color: #e74c3c;
-            font-weight: bold;
-        }
-        .summary-item {
-            margin-bottom: 10px;
-            padding: 8px 0;
-        }
-        .test-list {
-            max-height: 450px;
-            overflow-y: auto;
-            border: 2px solid #ecf0f1;
-            border-radius: 8px;
-            margin-bottom: 20px;
-            background-color: #ffffff;
-        }
-        .test-item {
-            padding: 20px;
-            border-bottom: 1px solid #ecf0f1;
-            cursor: pointer;
-            transition: all 0.3s;
-        }
-        .test-item:last-child {
-            border-bottom: none;
-        }
-        .test-item:hover {
-            background-color: #f8f9fa;
-        }
-        .test-item.selected {
-            background-color: #ebf3fd;
-            border-left: 5px solid #3498db;
-        }
-        .test-info {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-        }
-        .test-title {
-            font-weight: bold;
-            font-size: 18px;
-            color: #2c3e50;
-            margin-bottom: 5px;
-        }
-        .test-questions {
-            color: #7f8c8d;
-            font-size: 14px;
-            font-weight: bold;
-        }
-        .test-description {
-            color: #95a5a6;
-            font-size: 14px;
-            margin-top: 8px;
-            line-height: 1.4;
-        }
-        .action-buttons {
-            display: flex;
-            justify-content: space-between;
-            gap: 15px;
-            flex-wrap: wrap;
-        }
-        .action-buttons button {
-            flex: 1;
-            min-width: 150px;
-        }
-        .or-divider {
-            text-align: center;
-            margin: 25px 0;
-            position: relative;
-        }
-        .or-divider::before {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 0;
-            right: 0;
-            height: 2px;
-            background-color: #ecf0f1;
-            z-index: 0;
-        }
-        .or-divider span {
-            background-color: #ffffff;
-            padding: 0 15px;
-            position: relative;
-            z-index: 1;
-            color: #7f8c8d;
-            font-weight: bold;
-        }
-        .timer {
-            font-size: 18px;
-            color: #e74c3c;
-            text-align: right;
-            margin-bottom: 15px;
-            font-weight: bold;
-            background-color: #fdf2f2;
-            padding: 10px;
-            border-radius: 6px;
-        }
-        .directory-path {
-            background-color: #f8f9fa;
-            padding: 15px;
-            margin-bottom: 20px;
-            border-radius: 8px;
-            font-size: 14px;
-            color: #495057;
-            border-left: 4px solid #6c757d;
-        }
-        .loading-message {
-            text-align: center;
-            padding: 40px 20px;
-            color: #6c757d;
-            font-style: italic;
-        }
-        .no-tests-message {
-            text-align: center;
-            padding: 40px 20px;
-            color: #dc3545;
-            background-color: #f8d7da;
-            border-radius: 8px;
-            border: 1px solid #f5c6cb;
-        }
-        .difficulty-badge {
-            display: inline-block;
-            padding: 4px 8px;
-            border-radius: 12px;
-            font-size: 12px;
-            font-weight: bold;
-            text-transform: uppercase;
-        }
-        .difficulty-facile {
-            background-color: #d4edda;
-            color: #155724;
-        }
-        .difficulty-moyen {
-            background-color: #fff3cd;
-            color: #856404;
-        }
-        .difficulty-difficile {
-            background-color: #f8d7da;
-            color: #721c24;
-        }
-        .status-message {
-            padding: 15px;
-            margin: 15px 0;
-            border-radius: 6px;
-            font-weight: bold;
-        }
-        .status-success {
-            background-color: #d4edda;
-            color: #155724;
-            border: 1px solid #c3e6cb;
-        }
-        .status-error {
-            background-color: #f8d7da;
-            color: #721c24;
-            border: 1px solid #f5c6cb;
-        }
-        .status-info {
-            background-color: #d1ecf1;
-            color: #0c5460;
-            border: 1px solid #bee5eb;
-        }
-        .status-warning {
-            background-color: #fff3cd;
-            color: #856404;
-            border: 1px solid #ffeaa7;
-        }
-        .server-info {
-            background-color: #e9ecef;
-            padding: 15px;
-            margin: 15px 0;
-            border-radius: 6px;
-            font-size: 14px;
-            color: #495057;
-            border-left: 4px solid #6c757d;
-        }
-        @media (max-width: 768px) {
-            .container {
-                padding: 20px;
-                margin: 10px;
-            }
-            .action-buttons {
-                flex-direction: column;
-            }
-            .action-buttons button {
-                min-width: auto;
-            }
-            h1 {
-                font-size: 24px;
-            }
-        }
+        .hidden {display: none;}
+        .question-text {font-size: 20px;margin-bottom: 20px;font-weight: bold;color: #2c3e50;}
+        .answer-option {margin-bottom: 12px;padding: 15px;border: 2px solid #ecf0f1;border-radius: 8px;cursor: pointer;transition: all 0.3s;background-color: #ffffff;}
+        .answer-option:hover {background-color: #f8f9fa;border-color: #bdc3c7;}
+        .answer-option.selected {background-color: #ebf3fd;border-color: #3498db;box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);}
+        .coefficient {font-style: italic;color: #7f8c8d;margin-top: 15px;font-size: 14px;}
+        .progress-bar {height: 12px;background-color: #ecf0f1;border-radius: 6px;margin-bottom: 20px;overflow: hidden;}
+        .progress {height: 100%;background-color: #27ae60;border-radius: 6px;width: 0%;transition: width 0.3s ease;}
+        .result-details {margin-top: 20px;padding: 15px;background-color: #f8f9fa;border-radius: 8px;border: 1px solid #dee2e6;}
+        .correct {color: #27ae60;font-weight: bold;}
+        .incorrect {color: #e74c3c;font-weight: bold;}
+        .summary-item {margin-bottom: 10px;padding: 8px 0;}
+        .test-list {max-height: 450px;overflow-y: auto;border: 2px solid #ecf0f1;border-radius: 8px;margin-bottom: 20px;background-color: #ffffff;}
+        .test-item {padding: 20px;border-bottom: 1px solid #ecf0f1;cursor: pointer;transition: all 0.3s;}
+        .test-item:last-child {border-bottom: none;}
+        .test-item:hover {background-color: #f8f9fa;}
+        .test-item.selected {background-color: #ebf3fd;border-left: 5px solid #3498db;}
+        .test-info {display: flex;justify-content: space-between;align-items: flex-start;}
+        .test-title {font-weight: bold;font-size: 18px;color: #2c3e50;margin-bottom: 5px;}
+        .test-questions {color: #7f8c8d;font-size: 14px;font-weight: bold;}
+        .test-description {color: #95a5a6;font-size: 14px;margin-top: 8px;line-height: 1.4;}
+        .action-buttons {display: flex;justify-content: space-between;gap: 15px;flex-wrap: wrap;}
+        .action-buttons button {flex: 1;min-width: 150px;}
+        .directory-path {background-color: #f8f9fa;padding: 15px;margin-bottom: 20px;border-radius: 8px;font-size: 14px;color: #495057;border-left: 4px solid #6c757d;}
+        .loading-message {text-align: center;padding: 40px 20px;color: #6c757d;font-style: italic;}
+        .no-tests-message {text-align: center;padding: 40px 20px;color: #dc3545;background-color: #f8d7da;border-radius: 8px;border: 1px solid #f5c6cb;}
+        .status-message {padding: 15px;margin: 15px 0;border-radius: 6px;font-weight: bold;}
+        .status-success {background-color: #d4edda;color: #155724;border: 1px solid #c3e6cb;}
+        .status-error {background-color: #f8d7da;color: #721c24;border: 1px solid #f5c6cb;}
+        .status-info {background-color: #d1ecf1;color: #0c5460;border: 1px solid #bee5eb;}
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>🎓 TEST DE CONNAISSANCES</h1>
-        
-        <!-- Section de chargement du QCM -->
-        <div id="load-section" class="section">
-            <h2>📋 Liste des tests disponibles</h2>
-            
-            <div class="directory-path">
-                <strong>📁 Répertoire des tests :</strong> ./tests/
-            </div>
-            
-            <!-- Information sur le serveur -->
-            <div class="server-info">
-                <strong>ℹ️ Mode de fonctionnement :</strong> 
-                <span id="server-mode">Détection automatique en cours...</span>
-            </div>
-            
-            <!-- Liste des tests disponibles -->
-            <div id="available-tests-section">
-                <div id="available-tests" class="test-list">
-                    <p id="loading-message" class="loading-message">🔄 Chargement des tests disponibles...</p>
-                </div>
-                
-                <div class="action-buttons">
-                    <button id="load-selected-test" disabled onclick="loadSelectedTest()">
-                        📖 Charger le test sélectionné
-                    </button>
-                    <button class="secondary" onclick="refreshAvailableTests()">
-                        🔄 Rafraîchir la liste
-                    </button>
-                </div>
-            </div>
-            
-            <div class="or-divider">
-                <span>OU</span>
-            </div>
-            
-            <!-- Chargement manuel d'un fichier -->
-            <div>
-                <h3>📁 Chargement manuel</h3>
-                <p>Sélectionnez un fichier de questionnaire JSON depuis votre ordinateur :</p>
-                <input type="file" id="qcm-file" accept=".json">
-                <button onclick="loadQCMFromFile()">
-                    📤 Charger le QCM depuis fichier
-                </button>
-            </div>
-        </div>
-        
-        <!-- Section d'information du QCM -->
-        <div id="qcm-info" class="section hidden">
-            <h2>ℹ️ Informations du Test</h2>
-            <h3 id="qcm-title-display"></h3>
-            <p><strong>Nombre total de questions:</strong> <span id="qcm-total-questions"></span></p>
-            
-            <div id="candidate-info">
-                <label for="candidate-name">👤 Nom du candidat :</label>
-                <input type="text" id="candidate-name" placeholder="Ex: Jean Dupont" required>
-                <div class="action-buttons">
-                    <button onclick="startTest()">
-                        🚀 Commencer le test
-                    </button>
-                    <button class="secondary" onclick="returnToTestList()">
-                        ← Retour à la liste des tests
-                    </button>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Section du test -->
-        <div id="test-section" class="hidden">
-            <div class="timer" id="test-timer">⏱️ Temps: 00:00</div>
-            <div class="progress-bar">
-                <div id="progress" class="progress"></div>
-            </div>
-            
-            <div id="question-display">
-                <h3>❓ Question <span id="current-test-question">1</span> / <span id="total-test-questions">0</span></h3>
-                
-                <div class="question-preview">
-                    <div id="test-question-text" class="question-text"></div>
-                    
-                    <div class="answer-options">
-                        <div class="answer-option" onclick="selectAnswer(1)">
-                            <strong>A.</strong> <span id="test-answer1"></span>
-                        </div>
-                        <div class="answer-option" onclick="selectAnswer(2)">
-                            <strong>B.</strong> <span id="test-answer2"></span>
-                        </div>
-                        <div class="answer-option" onclick="selectAnswer(3)">
-                            <strong>C.</strong> <span id="test-answer3"></span>
-                        </div>
-                    </div>
-                    
-                    <div class="coefficient">
-                        ⚖️ Coefficient: <span id="test-coefficient"></span>
-                    </div>
-                </div>
-                
-                <button id="next-button" onclick="saveAnswer()" disabled>
-                    ➡️ Question suivante
-                </button>
-            </div>
-            
-            <div id="test-result" class="result hidden"></div>
-        </div>
-        
-        <!-- Messages de statut -->
-        <div id="status-messages"></div>
+<div class="container">
+<h1>🎓 TEST DE CONNAISSANCES</h1>
+<div id="load-section" class="section">
+    <h2>📋 Liste des tests disponibles</h2>
+    <div class="directory-path"><strong>📁 Répertoire des tests :</strong> ./tests/</div>
+    <div id="available-tests" class="test-list">
+        <p id="loading-message" class="loading-message">🔄 Chargement des tests disponibles...</p>
     </div>
+    <div class="action-buttons">
+        <button id="load-selected-test" disabled onclick="loadSelectedTest()">📖 Charger le test sélectionné</button>
+        <button class="secondary" onclick="refreshAvailableTests()">🔄 Rafraîchir la liste</button>
+    </div>
+</div>
+<div id="qcm-info" class="section hidden">
+    <h2>ℹ️ Informations du Test</h2>
+    <h3 id="qcm-title-display"></h3>
+    <p><strong>Nombre total de questions:</strong> <span id="qcm-total-questions"></span></p>
+    <label for="candidate-name">👤 Nom du candidat :</label>
+    <input type="text" id="candidate-name" placeholder="Ex: Jean Dupont" required>
+    <div class="action-buttons">
+        <button onclick="startTest()">🚀 Commencer le test</button>
+        <button class="secondary" onclick="returnToTestList()">← Retour à la liste des tests</button>
+    </div>
+</div>
+<div id="test-section" class="hidden">
+    <div class="timer" id="test-timer">⏱️ Temps: 00:00</div>
+    <div class="progress-bar"><div id="progress" class="progress"></div></div>
+    <div id="question-display">
+        <h3>❓ Question <span id="current-test-question">1</span> / <span id="total-test-questions">0</span></h3>
+        <div class="question-preview">
+            <div id="test-question-text" class="question-text"></div>
+            <div class="answer-options">
+                <div class="answer-option" onclick="selectAnswer(1)"><strong>A.</strong> <span id="test-answer1"></span></div>
+                <div class="answer-option" onclick="selectAnswer(2)"><strong>B.</strong> <span id="test-answer2"></span></div>
+                <div class="answer-option" onclick="selectAnswer(3)"><strong>C.</strong> <span id="test-answer3"></span></div>
+            </div>
+            <div class="coefficient">⚖️ Coefficient: <span id="test-coefficient"></span></div>
+        </div>
+        <button id="next-button" onclick="saveAnswer()" disabled>➡️ Question suivante</button>
+    </div>
+    <div id="test-result" class="result hidden"></div>
+</div>
+<div id="status-messages"></div>
+</div>
+<script>
+// Variables globales simplifiées
+let qcmData={title:'',totalQuestions:0,questions:[]};let currentQuestionIndex=0;let candidateAnswers=[];let candidateName='';let selectedAnswer=null;let availableTests=[];let selectedTestIndex=-1;let startTime=null;let timerInterval=null;let totalTimeInSeconds=0;
+const TESTS_DIRECTORY='./tests';
 
-    <script>
-        // Variables globales
-        let qcmData = {
-            title: '',
-            totalQuestions: 0,
-            questions: []
-        };
-        
-        let currentQuestionIndex = 0;
-        let candidateAnswers = [];
-        let candidateName = '';
-        let selectedAnswer = null;
-        let availableTests = [];
-        let selectedTestIndex = -1;
-        let startTime = null;
-        let timerInterval = null;
-        let totalTimeInSeconds = 0;
-        let isServerMode = false;
-        
-        // Chemins des répertoires
-        const TESTS_DIRECTORY = './tests';
-        const RESULTS_DIRECTORY = './results';
-        
-        // Fonction pour détecter si on est en mode serveur
-        function detectServerMode() {
-            // Vérifier si on accède via http/https ou file://
-            const isFileProtocol = window.location.protocol === 'file:';
-            const hasOrigin = window.location.origin && window.location.origin !== 'null';
-            
-            isServerMode = !isFileProtocol && hasOrigin;
-            
-            const serverModeElement = document.getElementById('server-mode');
-            if (isServerMode) {
-                serverModeElement.innerHTML = '🌐 Mode serveur détecté - Toutes les fonctionnalités sont disponibles';
-                serverModeElement.parentElement.className = 'status-success';
-            } else {
-                serverModeElement.innerHTML = '📁 Mode fichier local - Sauvegarde serveur indisponible, téléchargement uniquement';
-                serverModeElement.parentElement.className = 'status-warning';
-            }
-        }
-        
-        // Fonction pour afficher les messages de statut
-        function showStatusMessage(message, type = 'info') {
-            const statusContainer = document.getElementById('status-messages');
-            const messageDiv = document.createElement('div');
-            messageDiv.className = `status-message status-${type}`;
-            messageDiv.innerHTML = message;
-            
-            statusContainer.appendChild(messageDiv);
-            
-            // Supprimer le message après 5 secondes
-            setTimeout(() => {
-                if (messageDiv.parentNode) {
-                    messageDiv.parentNode.removeChild(messageDiv);
-                }
-            }, 5000);
-        }
-        
-        // Récupérer la liste des tests disponibles
-        function fetchAvailableTests() {
-            const loadingMessage = document.getElementById('loading-message');
-            loadingMessage.textContent = "🔄 Chargement des tests disponibles...";
-            
-            if (!isServerMode) {
-                // En mode fichier local, utiliser directement les tests de démonstration
-                showStatusMessage('📁 Mode fichier local : utilisation des tests de démonstration', 'info');
-                loadDemoTests();
-                return;
-            }
-            
-            // Tentative de récupération via une API backend (si disponible)
-            fetch(`${TESTS_DIRECTORY}/index.json`)
-                .then(response => {
-                    if (!response.ok) {
-                        throw new Error('Fichier index.json non trouvé');
-                    }
-                    return response.json();
-                })
-                .then(data => {
-                    availableTests = data.tests || data;
-                    displayAvailableTests();
-                    showStatusMessage('✅ Tests chargés depuis le serveur', 'success');
-                })
-                .catch(error => {
-                    console.log('Chargement depuis index.json échoué, utilisation des tests de démonstration:', error);
-                    showStatusMessage('⚠️ Fichier index.json non trouvé, utilisation des tests de démonstration', 'warning');
-                    loadDemoTests();
-                });
-        }
-        
-        // Charger les tests de démonstration
-        function loadDemoTests() {
-            availableTests = [
-                {
-                    id: "questions1",
-                    title: "TEST MATIERE X",
-                    description: "Test de base avec 3 questions - Idéal pour débuter",
-                    totalQuestions: 3,
-                    filename: "questions1.json",
-                    difficulty: "Facile",
-                    category: "Général"
-                },
-                {
-                    id: "math-basic",
-                    title: "Mathématiques - Niveau Débutant",
-                    description: "Arithmétique et algèbre de base",
-                    totalQuestions: 10,
-                    filename: "maths-debutant.json",
-                    difficulty: "Facile",
-                    category: "Mathématiques"
-                },
-                {
-                    id: "math-intermediate",
-                    title: "Mathématiques - Niveau Intermédiaire",
-                    description: "Fonctions, géométrie et probabilités",
-                    totalQuestions: 15,
-                    filename: "maths-intermediaire.json",
-                    difficulty: "Moyen",
-                    category: "Mathématiques"
-                },
-                {
-                    id: "french-grammar",
-                    title: "Français - Grammaire",
-                    description: "Règles de grammaire française essentielles",
-                    totalQuestions: 12,
-                    filename: "francais-grammaire.json",
-                    difficulty: "Moyen",
-                    category: "Français"
-                },
-                {
-                    id: "culture-generale",
-                    title: "Culture Générale",
-                    description: "Histoire, géographie, sciences et actualités",
-                    totalQuestions: 20,
-                    filename: "culture-generale.json",
-                    difficulty: "Moyen",
-                    category: "Culture"
-                },
-                {
-                    id: "english-vocabulary",
-                    title: "Anglais - Vocabulaire",
-                    description: "Mots et expressions courantes en anglais",
-                    totalQuestions: 15,
-                    filename: "anglais-vocabulaire.json",
-                    difficulty: "Facile",
-                    category: "Langues"
-                },
-                {
-                    id: "programming-basics",
-                    title: "Programmation - Bases",
-                    description: "Concepts fondamentaux de programmation",
-                    totalQuestions: 18,
-                    filename: "programmation-bases.json",
-                    difficulty: "Moyen",
-                    category: "Informatique"
-                },
-                {
-                    id: "science-physics",
-                    title: "Physique - Mécanique",
-                    description: "Lois de Newton et principes de cinématique",
-                    totalQuestions: 14,
-                    filename: "physique-mecanique.json",
-                    difficulty: "Difficile",
-                    category: "Sciences"
-                }
-            ];
-            
-            displayAvailableTests();
-        }
-        
-        // Afficher la liste des tests disponibles
-        function displayAvailableTests() {
-            const testsContainer = document.getElementById('available-tests');
-            
-            if (availableTests.length === 0) {
-                testsContainer.innerHTML = '<div class="no-tests-message">❌ Aucun test disponible dans le répertoire ./tests/</div>';
-                return;
-            }
-            
-            let testsHTML = '';
-            availableTests.forEach((test, index) => {
-                const difficultyClass = `difficulty-${test.difficulty?.toLowerCase() || 'moyen'}`;
-                
-                testsHTML += `
-                    <div class="test-item" onclick="selectTest(${index})" id="test-item-${index}">
-                        <div class="test-info">
-                            <div>
-                                <div class="test-title">${test.title}</div>
-                                ${test.description ? `<div class="test-description">${test.description}</div>` : ''}
-                                ${test.category ? `<div class="test-description"><strong>Catégorie:</strong> ${test.category}</div>` : ''}
-                            </div>
-                            <div style="text-align: right;">
-                                <div class="test-questions">${test.totalQuestions} questions</div>
-                                ${test.difficulty ? `<span class="difficulty-badge ${difficultyClass}">${test.difficulty}</span>` : ''}
-                            </div>
-                        </div>
-                    </div>
-                `;
-            });
-            
-            testsContainer.innerHTML = testsHTML;
-        }
-        
-        // Sélectionner un test
-        function selectTest(index) {
-            // Déselectionner l'ancien test
-            if (selectedTestIndex !== -1) {
-                const oldElement = document.getElementById(`test-item-${selectedTestIndex}`);
-                if (oldElement) {
-                    oldElement.classList.remove('selected');
-                }
-            }
-            
-            // Sélectionner le nouveau test
-            selectedTestIndex = index;
-            document.getElementById(`test-item-${index}`).classList.add('selected');
-            document.getElementById('load-selected-test').disabled = false;
-        }
-        
-        // Charger le test sélectionné
-        function loadSelectedTest() {
-            if (selectedTestIndex === -1) {
-                showStatusMessage('⚠️ Veuillez sélectionner un test d\'abord.', 'error');
-                return;
-            }
-            
-            const selectedTest = availableTests[selectedTestIndex];
-            showStatusMessage(`🔄 Chargement du test: ${selectedTest.title}...`, 'info');
-            
-            if (isServerMode) {
-                // Tentative de chargement depuis le serveur
-                fetch(`${TESTS_DIRECTORY}/${selectedTest.filename}`)
-                    .then(response => {
-                        if (!response.ok) {
-                            throw new Error(`Impossible de charger ${selectedTest.filename}`);
-                        }
-                        return response.json();
-                    })
-                    .then(data => {
-                        qcmData = data;
-                        showTestInfo();
-                        showStatusMessage('✅ Test chargé avec succès depuis le serveur!', 'success');
-                    })
-                    .catch(error => {
-                        console.log('Erreur de chargement depuis le serveur:', error);
-                        showStatusMessage('⚠️ Fichier non trouvé sur le serveur, utilisation des données de démonstration', 'warning');
-                        loadDemoTestData(selectedTest);
-                    });
-            } else {
-                // Mode fichier local : utiliser les données de démonstration
-                loadDemoTestData(selectedTest);
-            }
-        }
-        
-        // Charger les données de démonstration pour un test
-        function loadDemoTestData(selectedTest) {
-            if (selectedTest.filename === "questions1.json") {
-                qcmData = {
-                    title: "TEST MATIERE X",
-                    totalQuestions: 3,
-                    questions: [
-                        {
-                            text: "Quelle est la capitale de la France ?",
-                            answers: ["Paris", "Lyon", "Marseille"],
-                            correctAnswer: "1",
-                            coefficient: 1
-                        },
-                        {
-                            text: "Combien font 2 + 2 ?",
-                            answers: ["3", "4", "5"],
-                            correctAnswer: "2",
-                            coefficient: 2
-                        },
-                        {
-                            text: "Quel est le plus grand océan ?",
-                            answers: ["Atlantique", "Indien", "Pacifique"],
-                            correctAnswer: "3",
-                            coefficient: 3
-                        }
-                    ]
-                };
-            } else {
-                // Générer des données fictives pour les autres tests
-                qcmData = {
-                    title: selectedTest.title,
-                    totalQuestions: selectedTest.totalQuestions,
-                    questions: []
-                };
-                
-                // Générer des questions fictives basées sur la catégorie
-                for (let i = 0; i < selectedTest.totalQuestions; i++) {
-                    const questionData = generateDemoQuestion(selectedTest.category, i + 1);
-                    qcmData.questions.push(questionData);
-                }
-            }
-            
-            showTestInfo();
-            showStatusMessage('✅ Test de démonstration chargé avec succès!', 'success');
-        }
-        
-        // Générer une question de démonstration basée sur la catégorie
-        function generateDemoQuestion(category, questionNumber) {
-            const questionTemplates = {
-                'Mathématiques': {
-                    questions: [
-                        'Quelle est la valeur de x dans l\'équation 2x + 5 = 15 ?',
-                        'Combien font 15% de 200 ?',
-                        'Quelle est l\'aire d\'un cercle de rayon 5 cm ? (π ≈ 3,14)',
-                        'Quelle est la dérivée de x² ?'
-                    ],
-                    answers: [
-                        ['x = 5', 'x = 7', 'x = 10'],
-                        ['25', '30', '35'],
-                        ['78,5 cm²', '31,4 cm²', '15,7 cm²'],
-                        ['2x', 'x', '2']
-                    ]
-                },
-                'Français': {
-                    questions: [
-                        'Quel est le féminin de "acteur" ?',
-                        'Quelle est la fonction du mot souligné : "Le chat MANGE sa pâtée" ?',
-                        'Comment s\'accorde le participe passé avec l\'auxiliaire être ?',
-                        'Quel est le pluriel de "cheval" ?'
-                    ],
-                    answers: [
-                        ['actrice', 'acteuse', 'acteure'],
-                        ['verbe', 'sujet', 'complément'],
-                        ['avec le sujet', 'avec le COD', 'jamais'],
-                        ['chevals', 'chevaux', 'chevaus']
-                    ]
-                },
-                'Culture': {
-                    questions: [
-                        'En quelle année a eu lieu la Révolution française ?',
-                        'Qui a peint "La Joconde" ?',
-                        'Quelle est la capitale de l\'Australie ?',
-                        'Combien y a-t-il de continents ?'
-                    ],
-                    answers: [
-                        ['1789', '1799', '1804'],
-                        ['Léonard de Vinci', 'Michel-Ange', 'Raphaël'],
-                        ['Canberra', 'Sydney', 'Melbourne'],
-                        ['5', '6', '7']
-                    ]
-                }
-            };
-            
-            const defaultQuestions = [
-                'Question de démonstration sur le sujet',
-                'Exemple de question pour ce test',
-                'Question fictive pour la démonstration'
-            ];
-            
-            const template = questionTemplates[category];
-            let questionText, answers;
-            
-            if (template && template.questions.length > 0) {
-                const index = (questionNumber - 1) % template.questions.length;
-                questionText = template.questions[index];
-                answers = template.answers[index];
-            } else {
-                questionText = `Question ${questionNumber} du test "${category}" - Ceci est une question de démonstration.`;
-                answers = [
-                    `Réponse A pour la question ${
+// Fonction pour afficher un message
+function showStatusMessage(message,type='info'){
+ const container=document.getElementById('status-messages');
+ const div=document.createElement('div');
+ div.className=`status-message status-${type}`;div.textContent=message;container.appendChild(div);
+ setTimeout(()=>{if(div.parentNode){div.parentNode.removeChild(div);}},5000);
+}
+
+function fetchAvailableTests(){
+ document.getElementById('loading-message').textContent='🔄 Chargement des tests disponibles...';
+ fetch('./tests/index.json')
+   .then(r=>{if(!r.ok)throw new Error('Fichier index.json non trouvé');return r.json();})
+   .then(data=>{availableTests=data.tests||data;displayAvailableTests();showStatusMessage('✅ Tests chargés depuis index.json','success');})
+   .catch(()=>{availableTests=[];displayAvailableTests();showStatusMessage('⚠️ Aucun test trouvé','info');});
+}
+
+function displayAvailableTests(){
+ const container=document.getElementById('available-tests');
+ if(availableTests.length===0){container.innerHTML='<div class="no-tests-message">❌ Aucun test disponible</div>';return;}
+ let html='';availableTests.forEach((t,i)=>{
+ html+=`<div class="test-item" onclick="selectTest(${i})" id="test-item-${i}">
+        <div class="test-info"><div><div class="test-title">${t.title}</div>
+        ${t.description?`<div class="test-description">${t.description}</div>`:''}</div>
+        <div class="test-questions">${t.totalQuestions} questions</div></div></div>`});
+ container.innerHTML=html;
+}
+function selectTest(i){if(selectedTestIndex!==-1)document.getElementById(`test-item-${selectedTestIndex}`).classList.remove('selected');
+ selectedTestIndex=i;document.getElementById(`test-item-${i}`).classList.add('selected');document.getElementById('load-selected-test').disabled=false;}
+function loadSelectedTest(){
+ if(selectedTestIndex===-1){showStatusMessage('⚠️ Sélectionnez un test','error');return;}
+ const t=availableTests[selectedTestIndex];
+ fetch(`${TESTS_DIRECTORY}/${t.filename}`).then(r=>r.json()).then(d=>{qcmData=d;showTestInfo();})
+ .catch(()=>{showStatusMessage('⚠️ Test introuvable','error');});
+}
+function showTestInfo(){document.getElementById('load-section').classList.add('hidden');document.getElementById('qcm-info').classList.remove('hidden');
+ document.getElementById('qcm-title-display').textContent=qcmData.title;document.getElementById('qcm-total-questions').textContent=qcmData.totalQuestions;}
+function returnToTestList(){document.getElementById('qcm-info').classList.add('hidden');document.getElementById('load-section').classList.remove('hidden');}
+function startTest(){
+ candidateName=document.getElementById('candidate-name').value.trim();
+ if(!candidateName){showStatusMessage('⚠️ Entrez votre nom','error');return;}
+ document.getElementById('qcm-info').classList.add('hidden');document.getElementById('test-section').classList.remove('hidden');
+ candidateAnswers=[];currentQuestionIndex=0;document.getElementById('total-test-questions').textContent=qcmData.totalQuestions;
+ startTime=new Date();clearInterval(timerInterval);timerInterval=setInterval(updateTimer,1000);
+ displayTestQuestion();
+}
+function updateTimer(){totalTimeInSeconds=Math.floor((new Date()-startTime)/1000);
+ document.getElementById('test-timer').textContent=`⏱️ Temps: ${formatTime(totalTimeInSeconds)}`;}
+function formatTime(s){const m=Math.floor(s/60);return`${m.toString().padStart(2,'0')}:${(s%60).toString().padStart(2,'0')}`;}
+function displayTestQuestion(){
+ const q=qcmData.questions[currentQuestionIndex];
+ document.getElementById('current-test-question').textContent=currentQuestionIndex+1;
+ document.getElementById('test-question-text').textContent=q.text;
+ document.getElementById('test-coefficient').textContent=q.coefficient;
+ ['test-answer1','test-answer2','test-answer3'].forEach((id,i)=>document.getElementById(id).textContent=q.answers[i]);
+ selectedAnswer=null;document.getElementById('next-button').disabled=true;document.querySelectorAll('.answer-option').forEach(o=>o.classList.remove('selected'));
+ document.getElementById('progress').style.width=(currentQuestionIndex/qcmData.totalQuestions*100)+'%';
+ document.getElementById('next-button').textContent=(currentQuestionIndex===qcmData.totalQuestions-1)?'🏁 Terminer le test':'➡️ Question suivante';
+}
+function selectAnswer(n){selectedAnswer=n.toString();document.getElementById('next-button').disabled=false;
+ document.querySelectorAll('.answer-option').forEach((o,i)=>{o.classList.toggle('selected',i+1===n);});}
+function saveAnswer(){
+ if(selectedAnswer===null){showStatusMessage('⚠️ Sélectionnez une réponse','error');return;}
+ candidateAnswers.push({questionIndex:currentQuestionIndex,questionText:qcmData.questions[currentQuestionIndex].text,answer:selectedAnswer,correctAnswer:qcmData.questions[currentQuestionIndex].correctAnswer,coefficient:qcmData.questions[currentQuestionIndex].coefficient});
+ currentQuestionIndex++;if(currentQuestionIndex>=qcmData.totalQuestions)calculateAndDisplayResult();else displayTestQuestion();
+}
+function calculateAndDisplayResult(){
+ clearInterval(timerInterval);let total=0,earn=0,correct=0;candidateAnswers.forEach(a=>{total+=parseInt(a.coefficient);if(a.answer===a.correctAnswer){earn+=parseInt(a.coefficient);correct++;}});
+ const score=Math.round((earn/total)*20*100)/100;document.getElementById('question-display').classList.add('hidden');document.getElementById('progress').style.width='100%';
+ const res=document.getElementById('test-result');res.classList.remove('hidden');
+ res.innerHTML=`<h3>Résultat: ${score}/20</h3><button onclick="downloadResults()">💾 Télécharger les résultats</button>`;
+ localStorage.setItem('lastTestResults',JSON.stringify({candidateName,testTitle:qcmData.title,score,answers:candidateAnswers}));
+}
+function downloadResults(){
+ const r=JSON.parse(localStorage.getItem('lastTestResults')||'null');if(!r){showStatusMessage('❌ Aucun résultat','error');return;}
+ const blob=new Blob([JSON.stringify(r,null,2)],{type:'application/json'});const url=URL.createObjectURL(blob);
+ const a=document.createElement('a');a.href=url;a.download=`result-${r.candidateName}.json`;document.body.appendChild(a);a.click();document.body.removeChild(a);URL.revokeObjectURL(url);
+ showStatusMessage('💾 Résultats téléchargés','success');
+}
+function refreshAvailableTests(){selectedTestIndex=-1;document.getElementById('load-selected-test').disabled=true;fetchAvailableTests();}
+window.onload=function(){showStatusMessage('🚀 Application initialisée','success');fetchAvailableTests();}
+</script>
+</body>
+</html>
