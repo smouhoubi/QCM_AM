@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test QCM App</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            max-width: 800px; 
+            margin: 50px auto; 
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        .container {
+            background: rgba(255,255,255,0.1);
+            padding: 30px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+        }
+        h1 { text-align: center; margin-bottom: 30px; }
+        .test-item { 
+            margin: 15px 0; 
+            padding: 15px; 
+            background: rgba(255,255,255,0.2);
+            border-radius: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .status { 
+            padding: 5px 10px; 
+            border-radius: 20px; 
+            font-size: 12px;
+            font-weight: bold;
+        }
+        .success { background: #4CAF50; }
+        .error { background: #f44336; }
+        .pending { background: #ff9800; }
+        button {
+            background: linear-gradient(45deg, #4CAF50, #45a049);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 10px;
+            transition: transform 0.2s;
+        }
+        button:hover { transform: scale(1.05); }
+        .url-box {
+            background: rgba(0,0,0,0.3);
+            padding: 15px;
+            border-radius: 10px;
+            margin: 20px 0;
+            font-family: monospace;
+            word-break: break-all;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🧪 Test Application QCM</h1>
+        
+        <div class="url-box">
+            <strong>URLs de test :</strong><br>
+            GitHub Pages: <span id="github-url">https://smouhoubi.github.io/qcm_am/</span><br>
+            Local XAMPP: http://localhost/qcm_am/<br>
+            Cette page: <span id="current-url"></span>
+        </div>
+
+        <button onclick="testApp()">🚀 Tester l'application</button>
+        <button onclick="testLocal()">💻 Tester en local</button>
+        
+        <div id="results"></div>
+    </div>
+
+    <script>
+        document.getElementById('current-url').textContent = window.location.href;
+
+        async function testApp() {
+            const results = document.getElementById('results');
+            results.innerHTML = '<h2>Tests en cours...</h2>';
+
+            const tests = [
+                { name: 'Chargement index.html', url: './index.html' },
+                { name: 'Fichier tests/index.json', url: './tests/index.json' },
+                { name: 'Test demo', url: './tests/demo.json' },
+                { name: 'API PHP', url: './api.php' }
+            ];
+
+            for (let test of tests) {
+                const div = document.createElement('div');
+                div.className = 'test-item';
+                div.innerHTML = `
+                    <span>${test.name}</span>
+                    <span class="status pending">En cours...</span>
+                `;
+                results.appendChild(div);
+
+                try {
+                    const response = await fetch(test.url);
+                    const status = div.querySelector('.status');
+                    if (response.ok) {
+                        status.textContent = '✅ OK';
+                        status.className = 'status success';
+                    } else {
+                        status.textContent = `❌ ${response.status}`;
+                        status.className = 'status error';
+                    }
+                } catch (error) {
+                    const status = div.querySelector('.status');
+                    status.textContent = '❌ Erreur';
+                    status.className = 'status error';
+                }
+            }
+        }
+
+        function testLocal() {
+            window.open('http://localhost/qcm_am/', '_blank');
+        }
+
+        // Test automatique au chargement
+        setTimeout(testApp, 1000);
+    </script>
+</body>
+</html>
