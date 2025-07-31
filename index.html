@@ -1,256 +1,166 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TEST DE CONNAISSANCES</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #f5f5f5;
-        }
-        .container {
-            background-color: #ffffff;
-            border-radius: 8px;
-            padding: 30px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-        h1 {
-            color: #2c3e50;
-            text-align: center;
-            margin-bottom: 30px;
-            font-size: 28px;
-        }
-        h2, h3 {
-            color: #34495e;
-        }
-        .section {
-            margin-bottom: 30px;
-        }
-        label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: bold;
-            color: #2c3e50;
-        }
-        input, select, button {
-            margin-bottom: 15px;
-            padding: 10px;
-            border-radius: 6px;
-            border: 2px solid #bdc3c7;
-            font-size: 14px;
-        }
-        input:focus, select:focus {
-            outline: none;
-            border-color: #3498db;
-        }
-        select {
-            width: 100%;
-        }
-        button {
-            background-color: #27ae60;
-            color: white;
-            border: none;
-            cursor: pointer;
-            font-size: 16px;
-            padding: 12px 20px;
-            transition: background-color 0.3s;
-            font-weight: bold;
-        }
-        button:hover {
-            background-color: #229954;
-        }
-        button:disabled {
-            background-color: #95a5a6;
-            cursor: not-allowed;
-        }
-        button.secondary {
-            background-color: #3498db;
-        }
-        button.secondary:hover {
-            background-color: #2980b9;
-        }
-        .question-preview {
-            background-color: #f8f9fa;
-            padding: 20px;
-            border-radius: 8px;
-            border: 2px solid #e9ecef;
-            margin-bottom: 20px;
-            font-size: 16px;
-        }
-        .result {
-            font-size: 18px;
-            margin-top: 20px;
-            padding: 20px;
-            background-color: #e8f5e8;
-            border-radius: 8px;
-            border-left: 5px solid #27ae60;
-        }
-        .hidden {display: none;}
-        .question-text {font-size: 20px;margin-bottom: 20px;font-weight: bold;color: #2c3e50;}
-        .answer-option {margin-bottom: 12px;padding: 15px;border: 2px solid #ecf0f1;border-radius: 8px;cursor: pointer;transition: all 0.3s;background-color: #ffffff;}
-        .answer-option:hover {background-color: #f8f9fa;border-color: #bdc3c7;}
-        .answer-option.selected {background-color: #ebf3fd;border-color: #3498db;box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);}
-        .coefficient {font-style: italic;color: #7f8c8d;margin-top: 15px;font-size: 14px;}
-        .progress-bar {height: 12px;background-color: #ecf0f1;border-radius: 6px;margin-bottom: 20px;overflow: hidden;}
-        .progress {height: 100%;background-color: #27ae60;border-radius: 6px;width: 0%;transition: width 0.3s ease;}
-        .result-details {margin-top: 20px;padding: 15px;background-color: #f8f9fa;border-radius: 8px;border: 1px solid #dee2e6;}
-        .correct {color: #27ae60;font-weight: bold;}
-        .incorrect {color: #e74c3c;font-weight: bold;}
-        .summary-item {margin-bottom: 10px;padding: 8px 0;}
-        .test-list {max-height: 450px;overflow-y: auto;border: 2px solid #ecf0f1;border-radius: 8px;margin-bottom: 20px;background-color: #ffffff;}
-        .test-item {padding: 20px;border-bottom: 1px solid #ecf0f1;cursor: pointer;transition: all 0.3s;}
-        .test-item:last-child {border-bottom: none;}
-        .test-item:hover {background-color: #f8f9fa;}
-        .test-item.selected {background-color: #ebf3fd;border-left: 5px solid #3498db;}
-        .test-info {display: flex;justify-content: space-between;align-items: flex-start;}
-        .test-title {font-weight: bold;font-size: 18px;color: #2c3e50;margin-bottom: 5px;}
-        .test-questions {color: #7f8c8d;font-size: 14px;font-weight: bold;}
-        .test-description {color: #95a5a6;font-size: 14px;margin-top: 8px;line-height: 1.4;}
-        .action-buttons {display: flex;justify-content: space-between;gap: 15px;flex-wrap: wrap;}
-        .action-buttons button {flex: 1;min-width: 150px;}
-        .directory-path {background-color: #f8f9fa;padding: 15px;margin-bottom: 20px;border-radius: 8px;font-size: 14px;color: #495057;border-left: 4px solid #6c757d;}
-        .loading-message {text-align: center;padding: 40px 20px;color: #6c757d;font-style: italic;}
-        .no-tests-message {text-align: center;padding: 40px 20px;color: #dc3545;background-color: #f8d7da;border-radius: 8px;border: 1px solid #f5c6cb;}
-        .status-message {padding: 15px;margin: 15px 0;border-radius: 6px;font-weight: bold;}
-        .status-success {background-color: #d4edda;color: #155724;border: 1px solid #c3e6cb;}
-        .status-error {background-color: #f8d7da;color: #721c24;border: 1px solid #f5c6cb;}
-        .status-info {background-color: #d1ecf1;color: #0c5460;border: 1px solid #bee5eb;}
-    </style>
-</head>
-<body>
-<div class="container">
-<h1>🎓 TEST DE CONNAISSANCES</h1>
-<div id="load-section" class="section">
-    <h2>📋 Liste des tests disponibles</h2>
-    <div class="directory-path"><strong>📁 Répertoire des tests :</strong> ./tests/</div>
-    <div id="available-tests" class="test-list">
-        <p id="loading-message" class="loading-message">🔄 Chargement des tests disponibles...</p>
-    </div>
-    <div class="action-buttons">
-        <button id="load-selected-test" disabled onclick="loadSelectedTest()">📖 Charger le test sélectionné</button>
-        <button class="secondary" onclick="refreshAvailableTests()">🔄 Rafraîchir la liste</button>
-    </div>
-</div>
-<div id="qcm-info" class="section hidden">
-    <h2>ℹ️ Informations du Test</h2>
-    <h3 id="qcm-title-display"></h3>
-    <p><strong>Nombre total de questions:</strong> <span id="qcm-total-questions"></span></p>
-    <label for="candidate-name">👤 Nom du candidat :</label>
-    <input type="text" id="candidate-name" placeholder="Ex: Jean Dupont" required>
-    <div class="action-buttons">
-        <button onclick="startTest()">🚀 Commencer le test</button>
-        <button class="secondary" onclick="returnToTestList()">← Retour à la liste des tests</button>
-    </div>
-</div>
-<div id="test-section" class="hidden">
-    <div class="timer" id="test-timer">⏱️ Temps: 00:00</div>
-    <div class="progress-bar"><div id="progress" class="progress"></div></div>
-    <div id="question-display">
-        <h3>❓ Question <span id="current-test-question">1</span> / <span id="total-test-questions">0</span></h3>
-        <div class="question-preview">
-            <div id="test-question-text" class="question-text"></div>
-            <div class="answer-options">
-                <div class="answer-option" onclick="selectAnswer(1)"><strong>A.</strong> <span id="test-answer1"></span></div>
-                <div class="answer-option" onclick="selectAnswer(2)"><strong>B.</strong> <span id="test-answer2"></span></div>
-                <div class="answer-option" onclick="selectAnswer(3)"><strong>C.</strong> <span id="test-answer3"></span></div>
-            </div>
-            <div class="coefficient">⚖️ Coefficient: <span id="test-coefficient"></span></div>
-        </div>
-        <button id="next-button" onclick="saveAnswer()" disabled>➡️ Question suivante</button>
-    </div>
-    <div id="test-result" class="result hidden"></div>
-</div>
-<div id="status-messages"></div>
-</div>
 <script>
-// Variables globales simplifiées
-let qcmData={title:'',totalQuestions:0,questions:[]};let currentQuestionIndex=0;let candidateAnswers=[];let candidateName='';let selectedAnswer=null;let availableTests=[];let selectedTestIndex=-1;let startTime=null;let timerInterval=null;let totalTimeInSeconds=0;
+// Variables globales
+let qcmData={title:'',totalQuestions:0,questions:[]};
+let currentQuestionIndex=0;
+let candidateAnswers=[];
+let candidateName='';
+let selectedAnswer=null;
+let availableTests=[];
+let selectedTestIndex=-1;
+let startTime=null;
+let timerInterval=null;
+let totalTimeInSeconds=0;
 const TESTS_DIRECTORY='./tests';
 
-// Fonction pour afficher un message
+// Messages de statut
 function showStatusMessage(message,type='info'){
  const container=document.getElementById('status-messages');
  const div=document.createElement('div');
- div.className=`status-message status-${type}`;div.textContent=message;container.appendChild(div);
- setTimeout(()=>{if(div.parentNode){div.parentNode.removeChild(div);}},5000);
+ div.className=`status-message status-${type}`;div.textContent=message;
+ container.appendChild(div);
+ setTimeout(()=>{if(div.parentNode)div.parentNode.removeChild(div);},5000);
 }
 
+// === Gestion des tests ===
 function fetchAvailableTests(){
  document.getElementById('loading-message').textContent='🔄 Chargement des tests disponibles...';
  fetch('./tests/index.json')
-   .then(r=>{if(!r.ok)throw new Error('Fichier index.json non trouvé');return r.json();})
-   .then(data=>{availableTests=data.tests||data;displayAvailableTests();showStatusMessage('✅ Tests chargés depuis index.json','success');})
+   .then(r=>{if(!r.ok)throw new Error();return r.json();})
+   .then(data=>{availableTests=data.tests||data;displayAvailableTests();})
    .catch(()=>{availableTests=[];displayAvailableTests();showStatusMessage('⚠️ Aucun test trouvé','info');});
 }
 
 function displayAvailableTests(){
  const container=document.getElementById('available-tests');
- if(availableTests.length===0){container.innerHTML='<div class="no-tests-message">❌ Aucun test disponible</div>';return;}
- let html='';availableTests.forEach((t,i)=>{
- html+=`<div class="test-item" onclick="selectTest(${i})" id="test-item-${i}">
-        <div class="test-info"><div><div class="test-title">${t.title}</div>
-        ${t.description?`<div class="test-description">${t.description}</div>`:''}</div>
-        <div class="test-questions">${t.totalQuestions} questions</div></div></div>`});
+ if(availableTests.length===0){
+   container.innerHTML='<div class="no-tests-message">❌ Aucun test disponible</div>';return;
+ }
+ let html='';
+ availableTests.forEach((t,i)=>{
+   html+=`<div class="test-item" onclick="selectTest(${i})" id="test-item-${i}">
+          <div class="test-info"><div><div class="test-title">${t.title}</div>
+          ${t.description?`<div class="test-description">${t.description}</div>`:''}</div>
+          <div class="test-questions">${t.totalQuestions} questions</div></div></div>`;
+ });
  container.innerHTML=html;
 }
-function selectTest(i){if(selectedTestIndex!==-1)document.getElementById(`test-item-${selectedTestIndex}`).classList.remove('selected');
- selectedTestIndex=i;document.getElementById(`test-item-${i}`).classList.add('selected');document.getElementById('load-selected-test').disabled=false;}
+
+function selectTest(i){
+ if(selectedTestIndex!==-1)document.getElementById(`test-item-${selectedTestIndex}`).classList.remove('selected');
+ selectedTestIndex=i;
+ document.getElementById(`test-item-${i}`).classList.add('selected');
+ document.getElementById('load-selected-test').disabled=false;
+}
+
 function loadSelectedTest(){
  if(selectedTestIndex===-1){showStatusMessage('⚠️ Sélectionnez un test','error');return;}
  const t=availableTests[selectedTestIndex];
- fetch(`${TESTS_DIRECTORY}/${t.filename}`).then(r=>r.json()).then(d=>{qcmData=d;showTestInfo();})
- .catch(()=>{showStatusMessage('⚠️ Test introuvable','error');});
+ fetch(`${TESTS_DIRECTORY}/${t.filename}`)
+   .then(r=>r.json())
+   .then(d=>{qcmData=d;showTestInfo();})
+   .catch(()=>{showStatusMessage('⚠️ Test introuvable','error');});
 }
-function showTestInfo(){document.getElementById('load-section').classList.add('hidden');document.getElementById('qcm-info').classList.remove('hidden');
- document.getElementById('qcm-title-display').textContent=qcmData.title;document.getElementById('qcm-total-questions').textContent=qcmData.totalQuestions;}
-function returnToTestList(){document.getElementById('qcm-info').classList.add('hidden');document.getElementById('load-section').classList.remove('hidden');}
+
+function showTestInfo(){
+ document.getElementById('load-section').classList.add('hidden');
+ document.getElementById('qcm-info').classList.remove('hidden');
+ document.getElementById('qcm-title-display').textContent=qcmData.title;
+ document.getElementById('qcm-total-questions').textContent=qcmData.totalQuestions;
+}
+
+function returnToTestList(){
+ document.getElementById('qcm-info').classList.add('hidden');
+ document.getElementById('load-section').classList.remove('hidden');
+}
+
+// === Démarrage et affichage du test ===
 function startTest(){
  candidateName=document.getElementById('candidate-name').value.trim();
  if(!candidateName){showStatusMessage('⚠️ Entrez votre nom','error');return;}
- document.getElementById('qcm-info').classList.add('hidden');document.getElementById('test-section').classList.remove('hidden');
- candidateAnswers=[];currentQuestionIndex=0;document.getElementById('total-test-questions').textContent=qcmData.totalQuestions;
- startTime=new Date();clearInterval(timerInterval);timerInterval=setInterval(updateTimer,1000);
+ document.getElementById('qcm-info').classList.add('hidden');
+ document.getElementById('test-section').classList.remove('hidden');
+ candidateAnswers=[];currentQuestionIndex=0;
+ document.getElementById('total-test-questions').textContent=qcmData.totalQuestions;
+ startTime=new Date();clearInterval(timerInterval);
+ timerInterval=setInterval(updateTimer,1000);
  displayTestQuestion();
 }
-function updateTimer(){totalTimeInSeconds=Math.floor((new Date()-startTime)/1000);
- document.getElementById('test-timer').textContent=`⏱️ Temps: ${formatTime(totalTimeInSeconds)}`;}
-function formatTime(s){const m=Math.floor(s/60);return`${m.toString().padStart(2,'0')}:${(s%60).toString().padStart(2,'0')}`;}
+
+function updateTimer(){
+ totalTimeInSeconds=Math.floor((new Date()-startTime)/1000);
+ document.getElementById('test-timer').textContent=`⏱️ Temps: ${formatTime(totalTimeInSeconds)}`;
+}
+
+function formatTime(s){
+ const m=Math.floor(s/60);return`${m.toString().padStart(2,'0')}:${(s%60).toString().padStart(2,'0')}`;
+}
+
 function displayTestQuestion(){
  const q=qcmData.questions[currentQuestionIndex];
  document.getElementById('current-test-question').textContent=currentQuestionIndex+1;
  document.getElementById('test-question-text').textContent=q.text;
  document.getElementById('test-coefficient').textContent=q.coefficient;
  ['test-answer1','test-answer2','test-answer3'].forEach((id,i)=>document.getElementById(id).textContent=q.answers[i]);
- selectedAnswer=null;document.getElementById('next-button').disabled=true;document.querySelectorAll('.answer-option').forEach(o=>o.classList.remove('selected'));
+ selectedAnswer=null;document.getElementById('next-button').disabled=true;
+ document.querySelectorAll('.answer-option').forEach(o=>o.classList.remove('selected'));
  document.getElementById('progress').style.width=(currentQuestionIndex/qcmData.totalQuestions*100)+'%';
  document.getElementById('next-button').textContent=(currentQuestionIndex===qcmData.totalQuestions-1)?'🏁 Terminer le test':'➡️ Question suivante';
 }
-function selectAnswer(n){selectedAnswer=n.toString();document.getElementById('next-button').disabled=false;
- document.querySelectorAll('.answer-option').forEach((o,i)=>{o.classList.toggle('selected',i+1===n);});}
+
+function selectAnswer(n){
+ selectedAnswer=n.toString();document.getElementById('next-button').disabled=false;
+ document.querySelectorAll('.answer-option').forEach((o,i)=>o.classList.toggle('selected',i+1===n));
+}
+
 function saveAnswer(){
  if(selectedAnswer===null){showStatusMessage('⚠️ Sélectionnez une réponse','error');return;}
  candidateAnswers.push({questionIndex:currentQuestionIndex,questionText:qcmData.questions[currentQuestionIndex].text,answer:selectedAnswer,correctAnswer:qcmData.questions[currentQuestionIndex].correctAnswer,coefficient:qcmData.questions[currentQuestionIndex].coefficient});
- currentQuestionIndex++;if(currentQuestionIndex>=qcmData.totalQuestions)calculateAndDisplayResult();else displayTestQuestion();
+ currentQuestionIndex++;
+ if(currentQuestionIndex>=qcmData.totalQuestions)calculateAndDisplayResult();else displayTestQuestion();
 }
+
+// === Résultat et actions ===
 function calculateAndDisplayResult(){
- clearInterval(timerInterval);let total=0,earn=0,correct=0;candidateAnswers.forEach(a=>{total+=parseInt(a.coefficient);if(a.answer===a.correctAnswer){earn+=parseInt(a.coefficient);correct++;}});
- const score=Math.round((earn/total)*20*100)/100;document.getElementById('question-display').classList.add('hidden');document.getElementById('progress').style.width='100%';
+ clearInterval(timerInterval);
+ let total=0,earn=0,correct=0;
+ candidateAnswers.forEach(a=>{total+=parseInt(a.coefficient);if(a.answer===a.correctAnswer){earn+=parseInt(a.coefficient);correct++;}});
+ const score=Math.round((earn/total)*20*100)/100;
+ document.getElementById('question-display').classList.add('hidden');
+ document.getElementById('progress').style.width='100%';
  const res=document.getElementById('test-result');res.classList.remove('hidden');
- res.innerHTML=`<h3>Résultat: ${score}/20</h3><button onclick="downloadResults()">💾 Télécharger les résultats</button>`;
+ res.innerHTML=`<h3>Résultat: ${score}/20</h3>
+   <div class="action-buttons">
+     <button onclick="downloadResults()">💾 Télécharger les résultats</button>
+     <button onclick="returnToTestListAfterResult()" class="secondary">↩️ Retour à la liste des tests</button>
+   </div>`;
  localStorage.setItem('lastTestResults',JSON.stringify({candidateName,testTitle:qcmData.title,score,answers:candidateAnswers}));
 }
+
 function downloadResults(){
  const r=JSON.parse(localStorage.getItem('lastTestResults')||'null');if(!r){showStatusMessage('❌ Aucun résultat','error');return;}
  const blob=new Blob([JSON.stringify(r,null,2)],{type:'application/json'});const url=URL.createObjectURL(blob);
  const a=document.createElement('a');a.href=url;a.download=`result-${r.candidateName}.json`;document.body.appendChild(a);a.click();document.body.removeChild(a);URL.revokeObjectURL(url);
  showStatusMessage('💾 Résultats téléchargés','success');
 }
-function refreshAvailableTests(){selectedTestIndex=-1;document.getElementById('load-selected-test').disabled=true;fetchAvailableTests();}
+
+// 🔹 Nouveau : retour à la liste depuis la page de résultats
+function returnToTestListAfterResult(){
+ document.getElementById('test-section').classList.add('hidden');
+ document.getElementById('test-result').classList.add('hidden');
+ document.getElementById('load-section').classList.remove('hidden');
+ candidateAnswers=[];candidateName='';currentQuestionIndex=0;
+ selectedAnswer=null;selectedTestIndex=-1;totalTimeInSeconds=0;
+ document.getElementById('candidate-name').value='';
+ document.getElementById('progress').style.width='0%';
+ refreshAvailableTests();
+}
+
+// Rafraîchir la liste
+function refreshAvailableTests(){
+ selectedTestIndex=-1;
+ document.getElementById('load-selected-test').disabled=true;
+ fetchAvailableTests();
+}
+
 window.onload=function(){showStatusMessage('🚀 Application initialisée','success');fetchAvailableTests();}
 </script>
-</body>
-</html>
