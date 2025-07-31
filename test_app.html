@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Application QCM</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .test-item { margin: 10px 0; padding: 10px; border: 1px solid #ddd; }
+        .success { background-color: #d4edda; border-color: #c3e6cb; }
+        .error { background-color: #f8d7da; border-color: #f5c6cb; }
+        .pending { background-color: #fff3cd; border-color: #ffeaa7; }
+        button { margin: 10px 5px; padding: 10px 15px; }
+    </style>
+</head>
+<body>
+    <h1>🧪 Test de l'Application QCM</h1>
+    
+    <button onclick="runAllTests()">Lancer tous les tests</button>
+    <button onclick="clearResults()">Effacer les résultats</button>
+    
+    <div id="test-results"></div>
+
+    <script>
+        const tests = [
+            {
+                name: "Chargement de index.html",
+                test: () => document.title !== ""
+            },
+            {
+                name: "Chargement des tests (index.json)",
+                test: async () => {
+                    try {
+                        const response = await fetch('./tests/index.json');
+                        const data = await response.json();
+                        return data.tests && data.tests.length > 0;
+                    } catch (error) {
+                        return false;
+                    }
+                }
+            },
+            {
+                name: "Chargement d'un test spécifique",
+                test: async () => {
+                    try {
+                        const response = await fetch('./tests/demo.json');
+                        const data = await response.json();
+                        return data.questions && data.questions.length > 0;
+                    } catch (error) {
+                        return false;
+                    }
+                }
+            },
+            {
+                name: "API PHP disponible",
+                test: async () => {
+                    try {
+                        const response = await fetch('./api.php', {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify({ action: 'test' })
+                        });
+                        return response.ok;
+                    } catch (error) {
+                        return false;
+                    }
+                }
+            },
+            {
+                name: "Dossier results accessible",
+                test: async () => {
+                    try {
+                        const response = await fetch('./results/');
+                        return response.status !== 404;
+                    } catch (error) {
+                        return false;
+                    }
+                }
+            }
+        ];
+
+        async function runAllTests() {
+            const resultsDiv = document.getElementById('test-results');
+            resultsDiv.innerHTML = '<h2>Tests en cours...</h2>';
+
+            for (let i = 0; i < tests.length; i++) {
+                const test = tests[i];
+                const testDiv = document.createElement('div');
+                testDiv.className = 'test-item pending';
+                testDiv.innerHTML = `<strong>${test.name}</strong> - En cours...`;
+                resultsDiv.appendChild(testDiv);
+
+                try {
+                    const result = await test.test();
+                    testDiv.className = result ? 'test-item success' : 'test-item error';
+                    testDiv.innerHTML = `<strong>${test.name}</strong> - ${result ? '✅ Réussi' : '❌ Échoué'}`;
+                } catch (error) {
+                    testDiv.className = 'test-item error';
+                    testDiv.innerHTML = `<strong>${test.name}</strong> - ❌ Erreur: ${error.message}`;
+                }
+            }
+
+            // Résumé
+            const successCount = document.querySelectorAll('.success').length;
+            const totalCount = tests.length;
+            const summaryDiv = document.createElement('div');
+            summaryDiv.innerHTML = `<h3>Résumé: ${successCount}/${totalCount} tests réussis</h3>`;
+            resultsDiv.insertBefore(summaryDiv, resultsDiv.firstChild);
+        }
+
+        function clearResults() {
+            document.getElementById('test-results').innerHTML = '';
+        }
+
+        // Lancer les tests automatiquement au chargement
+        window.onload = () => {
+            setTimeout(runAllTests, 1000);
+        };
+    </script>
+</body>
+</html>
